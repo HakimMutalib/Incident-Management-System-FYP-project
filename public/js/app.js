@@ -27536,7 +27536,7 @@ var _hoisted_8 = {
 
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
   "class": "text-capitalize"
-}, "Namesss", -1
+}, "Name", -1
 /* HOISTED */
 );
 
