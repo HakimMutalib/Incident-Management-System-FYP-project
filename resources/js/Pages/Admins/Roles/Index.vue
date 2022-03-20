@@ -110,7 +110,7 @@
 </template>
 
 <script>
-import AdminLayout from '../../../Layouts/AdminLayout.vue'
+import AdminLayout from '@/Layouts/AdminLayout'
 import Pagination from '@/Components/Pagination'
 export default {
     props: ['roles','permissions'],
