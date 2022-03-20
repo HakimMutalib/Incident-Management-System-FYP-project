@@ -13,7 +13,7 @@
                             <table class="table table-hover table-dark text-nowrap">
                                 <thead>
                                     <tr>
-                                        <th class="text-capitalize">Names</th>
+                                        <th class="text-capitalize">Namesss</th>
                                         <th class="text-capitalize">Role</th>
                                         <th class="text-capitalize">E-mail</th>
                                         <th class="text-capitalize">Joined</th>
