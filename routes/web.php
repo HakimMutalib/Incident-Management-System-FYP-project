@@ -7,6 +7,7 @@ use App\Http\Controllers\Admins\RoleController;
 use App\Http\Controllers\Admins\PermissionController;
 use App\Http\Controllers\Admins\UserController;
 use App\Http\Controllers\Admins\AdminController;
+use App\Http\Controllers\News\NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,14 +35,34 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum','verified', 'role: super-admin|admin|moderator|developer'])->group(function
 (){
     Route::get('dashboard',[AdminDashboardController::class, 'index'])->name('dashboard.index');
-    
+
     Route::resource('admins',AdminController::class)->parameters(['admins'=>'user'])->only(['index','update']);
 
     Route::resource('users',UserController::class)->except(['create','show','edit']);
 
     Route::resource('permissions',PermissionController::class)->except(['create','show','edit']);
-    
+
     Route::resource('roles',RoleController::class)->except(['create','show','edit']);
 
 });
 
+Route::prefix('news')->name('news.')->middleware(['auth:sanctum','verified'])->group(function
+(){
+    Route::get('news',[NewsController::class, 'index'])->name('news.index');
+});
+
+
+
+
+
+
+
+scrip
+
+
+
+
+
+
+
+scrip
