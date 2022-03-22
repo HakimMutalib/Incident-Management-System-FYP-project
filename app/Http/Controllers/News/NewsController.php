@@ -15,7 +15,6 @@ class NewsController extends Controller
     public function index()
     {
         return Inertia::render('News/Index',[
-            'apikey' => "1db75d4466ab4d698992b8c5c3a22588"
         ]);
     }
 
