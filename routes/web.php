@@ -57,12 +57,3 @@ Route::prefix('news')->name('news.')->middleware(['auth:sanctum','verified'])->g
 
 
 
-scrip
-
-
-
-
-
-
-
-scrip

@@ -1,5 +1,5 @@
 require('./bootstrap');
-// sweet alert 
+// sweet alert
 window.Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -34,5 +34,6 @@ createInertiaApp({
             .mount(el);
     },
 });
+
 
 InertiaProgress.init({ color: '#4B5563' });
