@@ -8,6 +8,7 @@ use App\Http\Controllers\Admins\PermissionController;
 use App\Http\Controllers\Admins\UserController;
 use App\Http\Controllers\Admins\AdminController;
 use App\Http\Controllers\News\NewsController;
+use App\Http\Controllers\Virus\VirusController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,6 +50,11 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum','verified', '
 Route::prefix('news')->name('news.')->middleware(['auth:sanctum','verified'])->group(function
 (){
     Route::get('news',[NewsController::class, 'index'])->name('news.index');
+});
+
+Route::prefix('virus')->name('virus.')->middleware(['auth:sanctum','verified'])->group(function
+(){
+    Route::get('virus',[VirusController::class, 'virus'])->name('virus.virus');
 });
 
 
