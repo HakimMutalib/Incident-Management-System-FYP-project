@@ -33,6 +33,25 @@
               </p>
             </inertia-link>
           </li>
+
+          <li class="nav-item menu-open">
+            <inertia-link :href="route('news.news.index')" class="nav-link" :class="route().current('news.news.*') ? 'active' :''">
+              <i class="nav-icon fas fa-newspaper"></i>
+              <p>
+                News
+              </p>
+            </inertia-link>
+          </li>
+
+          <li class="nav-item menu-open">
+            <inertia-link :href="route('virus.virus.virus')" class="nav-link" :class="route().current('virus.virus.*') ? 'active' :''">
+              <i class="nav-icon fas fa-virus"></i>
+              <p>
+                Health Check
+              </p>
+            </inertia-link>
+          </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>

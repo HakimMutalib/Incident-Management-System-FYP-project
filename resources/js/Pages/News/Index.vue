@@ -2,33 +2,45 @@
     <div>
         <admin-layout>
           <section class="content">
-            <div class="container-fluid">
-                <div class="searchbar">
-      <form @submit.prevent="fetchSearchNews">
-        <input type="text" placeholder="search..." v-model="searchword">
-      </form>
-      <div class="search-icons">
-        <li v-if="!isBusy" class="fas fa-search" @click="fetchSearchNews"></li>
-        <li v-else class="fas fa-spinner fa-spin"></li>
-        <li class="fas fa-times" @click="fetchTopNews"></li>
-      </div>
-    </div>
-    <div class="result-list">
-      <article v-for="(article, index) in articles" :key="index" @click="navTo(article.url)">
-        <header>
-          <img v-if="article.urlToImage" :src="article.urlToImage" alt="">
-          <li v-else class="fas fa-image"></li>
-        </header>
-        <section v-html="article.title"></section>
-        <footer>
-          <li class="fas fa-chevron-right"></li>
-        </footer>
-      </article>
-    </div>
-    <div ref="infinitescrolltrigger" id="scroll-trigger">
-      <li v-if="showloader" class="fas fa-spinner fa-spin"></li>
-    </div>
-            </div>
+                <div class="container-fluid">
+                  <h1>Cyber News</h1>
+                    <div class="searchbar">
+                      <form @submit.prevent="fetchSearchNews">
+                        <div class="input-group">
+                          <div class="form-outline">
+                            <input type="search" id="form1" placeholder = "Search.." class="form-control" v-model="searchword"/>
+                          </div>
+                          <button type="button" class="btn btn-primary">
+                            <i v-if="!isBusy" class="fas fa-search" @click="fetchSearchNews"></i>
+                          </button>
+                        </div>
+                        </form>
+                    </div>
+                    <ul></ul>
+
+                  <div class="row">
+                      <article v-for="(article, index) in articles" :key="index"  class="col-lg-4 mb-3 d-flex align-items-stretch" >
+                              <div class="card-deck ">
+                                  <div class="card">
+                                        <img class="card-img-top" v-if="article.urlToImage" :src="article.urlToImage" style="width: 100%; height: 15vw; object-fit: cover;" alt="200x200">
+                                        <li v-else class="fas fa-image"></li>
+                                        <div class="card-body">
+                                          <h2 v-html="article.title" @click="navTo(article.url)" style= cursor:pointer class="underline-on-hover" ></h2>
+                                            <small class="text-muted">
+                                              <h6 v-html="article.author"></h6>
+                                            </small>
+                                          <p v-html="article.description"></p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <p>Published at: </p>
+                                            <p v-html="article.publishedAt"></p>
+                                        </div>
+                                  </div>
+                              </div>
+                      </article>
+                    </div>
+
+                </div>
           </section>
         </admin-layout>
     </div>
@@ -49,10 +61,10 @@ export default {
         showloader: false,
         currentPage: 1,
         totalResults: 0,
-        maxPerPage: 20,
+        maxPerPage: 9,
         searchword: '',
         articles: [],
-        country: 'us'
+        country: 'my'
       }
     },
     computed: {
@@ -83,7 +95,7 @@ export default {
         }
       },
       fetchTopNews() {
-        this.apiUrl = 'https://newsapi.org/v2/top-headlines?country=' + this.country +
+        this.apiUrl = 'https://newsapi.org/v2/everything?q=cybersecurity'  +
                         '&pageSize=' + this.maxPerPage +
                         '&apiKey=' + this.apiKey;
         this.isBusy = true;
@@ -118,7 +130,7 @@ export default {
             }
           })
         })
-        observer.observe(this.$refs.infinitescrolltrigger);
+       
       }
     },
     created() {
@@ -129,3 +141,13 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+
+.underline-on-hover:hover {
+
+    text-decoration: underline;
+
+}
+
+</style>
