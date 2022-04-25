@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Virus;
+namespace App\Http\Controllers\File;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-class VirusController extends Controller
+class FileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class VirusController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Virus/virus',[
+        return Inertia::render('File/File',[
         ]);
     }
 

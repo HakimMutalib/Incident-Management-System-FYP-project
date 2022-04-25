@@ -9,6 +9,7 @@ use App\Http\Controllers\Admins\UserController;
 use App\Http\Controllers\Admins\AdminController;
 use App\Http\Controllers\News\NewsController;
 use App\Http\Controllers\Virus\VirusController;
+use App\Http\Controllers\File\FileController;
 use App\Http\Controllers\Tickets\TicketController;
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +56,12 @@ Route::prefix('news')->name('news.')->middleware(['auth:sanctum','verified'])->g
 
 Route::prefix('virus')->name('virus.')->middleware(['auth:sanctum','verified'])->group(function
 (){
-    Route::get('virus',[VirusController::class, 'virus'])->name('virus.virus');
+    Route::get('virus',[VirusController::class, 'index'])->name('virus.virus');
+});
+
+Route::prefix('File')->name('File.')->middleware(['auth:sanctum','verified'])->group(function
+(){
+    Route::get('File',[FileController::class, 'index'])->name('File.File');
 });
 
 Route::prefix('tickets')->name('tickets.')->middleware(['auth:sanctum','verified'])->group(function

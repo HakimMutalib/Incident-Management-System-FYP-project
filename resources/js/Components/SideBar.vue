@@ -52,13 +52,33 @@
             </inertia-link>
           </li>
 
-          <li class="nav-item menu-open">
-            <inertia-link :href="route('virus.virus.virus')" class="nav-link" :class="route().current('virus.virus.*') ? 'active' :''">
-              <i class="nav-icon fas fa-virus"></i>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-viruses"></i>
               <p>
                 Virus Scanner
+                <i class="fas fa-angle-left right"></i>
               </p>
-            </inertia-link>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <inertia-link :href="route('virus.virus.virus')" class="nav-link"
+                :class="route().current('Virus.virus.*' ? 'active' : '')" >
+                   <i class="far fa-circle nav-icon "></i>
+                   <p>
+                     Website
+                   </p>
+                </inertia-link>
+              </li>
+               <li class="nav-item">
+                <inertia-link :href="route('File.File.File')" class="nav-link" :class="route().current('File.File.*') ? 'active' : ''">
+                   <i class="far fa-circle nav-icon "></i>
+                   <p>
+                     File
+                   </p>
+                </inertia-link>
+              </li>
+            </ul>
           </li>
 
           <li class="nav-item">
