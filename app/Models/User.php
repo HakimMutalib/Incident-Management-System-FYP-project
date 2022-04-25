@@ -61,7 +61,7 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
-     
+
     /**
      * The relationships that should always be loaded.
      *

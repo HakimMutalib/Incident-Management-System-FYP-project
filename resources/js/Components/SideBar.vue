@@ -18,7 +18,7 @@
         </div>
       </div>
 
-     
+
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -30,6 +30,15 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
+              </p>
+            </inertia-link>
+          </li>
+
+          <li class="nav-item menu-open">
+            <inertia-link :href="route('tickets.index')" class="nav-link" :class="route().current('tickets.*') ? 'active' :''">
+              <i class="nav-icon fas fa-ticket-alt"></i>
+              <p>
+                Ticket
               </p>
             </inertia-link>
           </li>
@@ -47,7 +56,7 @@
             <inertia-link :href="route('virus.virus.virus')" class="nav-link" :class="route().current('virus.virus.*') ? 'active' :''">
               <i class="nav-icon fas fa-virus"></i>
               <p>
-                Health Check
+                Virus Scanner
               </p>
             </inertia-link>
           </li>
@@ -58,12 +67,12 @@
               <p>
                 Tables
                 <i class="fas fa-angle-left right"></i>
-                
+
               </p>
-            </a>   
+            </a>
             <ul class="nav nav-treeview">
               <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.moderator || $page.props.auth.hasRole.developer">
-                <inertia-link :href="route('admin.admins.index')" class="nav-link" 
+                <inertia-link :href="route('admin.admins.index')" class="nav-link"
                 :class="route().current('admin.admins.*' ? 'active' : '')" >
                    <i class="far fa-circle nav-icon "></i>
                    <p>
@@ -125,8 +134,8 @@
 <script>
 import { InertiaLink } from '@inertiajs/inertia-vue3'
 export default {
-  
-    
+
+
 }
 
 

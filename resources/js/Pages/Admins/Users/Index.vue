@@ -55,7 +55,7 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body overflow-hidden">
+                        <div class="modal-body">
                             <div class="d-flex flex-column h4">
                                 <span>Preview: <span class="text-capitalize">{{ form.name }}</span>
                                 </span>

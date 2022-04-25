@@ -9,6 +9,7 @@ use App\Http\Controllers\Admins\UserController;
 use App\Http\Controllers\Admins\AdminController;
 use App\Http\Controllers\News\NewsController;
 use App\Http\Controllers\Virus\VirusController;
+use App\Http\Controllers\Tickets\TicketController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,6 +58,13 @@ Route::prefix('virus')->name('virus.')->middleware(['auth:sanctum','verified'])-
     Route::get('virus',[VirusController::class, 'virus'])->name('virus.virus');
 });
 
+Route::prefix('tickets')->name('tickets.')->middleware(['auth:sanctum','verified'])->group(function
+(){
+    Route::get('ticket',[TicketController::class, 'index'])->name('index');
+    Route::post('ticket',[TicketController::class, 'store'])->name('store');
+    Route::patch('{ticket}',[TicketController::class, 'update'])->name('update');
+    Route::delete('{ticket}',[TicketController::class, 'destroy'])->name('destroy');
+});
 
 
 
