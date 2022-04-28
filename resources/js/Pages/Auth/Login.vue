@@ -6,7 +6,7 @@
       <jet-authentication-card-logo />
     </template>
 
-    <div class="card-body">
+    <div class="card-body" >
 
       <jet-validation-errors class="mb-3" />
 

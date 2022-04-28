@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav me-auto">
-            <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
+            <jet-nav-link :href="route('admin.dashboard.index')" :active="route().current('admin.dashboard.index')">
               Dashboard
             </jet-nav-link>
           </ul>

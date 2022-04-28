@@ -2,7 +2,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <inertia-link href="route('admin.dashboard.index')" class="brand-link">
-      <img src="/storage/images/Gear.png" alt="gear Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="/assets/img/IMS%20Logo.png" alt="gear Logo" class="brand-image img-circle elevation-3" >
       <span class="brand-text font-weight-light">IMS</span>
     </inertia-link>
 
@@ -11,10 +11,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="/storage/images/User_1.jpg" class="img-circle elevation-2" alt="User">
+          <img src="/assets/img/User_1.jpg" class="img-circle elevation-2" alt="User">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{$page.props.user.name}}</a>
+          <a :href="route('profile.show')" class="d-block">{{$page.props.user.name}}</a>
         </div>
       </div>
 

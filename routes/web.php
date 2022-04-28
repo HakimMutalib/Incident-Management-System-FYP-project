@@ -11,6 +11,7 @@ use App\Http\Controllers\News\NewsController;
 use App\Http\Controllers\Virus\VirusController;
 use App\Http\Controllers\File\FileController;
 use App\Http\Controllers\Tickets\TicketController;
+use App\Http\Controllers\HomepageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +24,7 @@ use App\Http\Controllers\Tickets\TicketController;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('Homepage', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
@@ -34,6 +35,10 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
+Route::middleware([])->get('/homepage', function () {
+    return Inertia::render('Homepage');
+})->name('homepage');
 
 Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum','verified', 'role: super-admin|admin|moderator|developer'])->group(function
 (){
