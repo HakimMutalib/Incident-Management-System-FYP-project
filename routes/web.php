@@ -12,6 +12,7 @@ use App\Http\Controllers\Virus\VirusController;
 use App\Http\Controllers\File\FileController;
 use App\Http\Controllers\Tickets\TicketController;
 use App\Http\Controllers\HomepageController;
+use App\Charts\DonutChart;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,8 @@ use App\Http\Controllers\HomepageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 
 Route::get('/', function () {
     return Inertia::render('Homepage', [
@@ -40,8 +43,10 @@ Route::middleware([])->get('/homepage', function () {
     return Inertia::render('Homepage');
 })->name('homepage');
 
-Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum','verified', 'role: super-admin|admin|moderator|developer'])->group(function
+Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum','verified'])->group(function
 (){
+
+
     Route::get('dashboard',[AdminDashboardController::class, 'index'])->name('dashboard.index');
 
     Route::resource('admins',AdminController::class)->parameters(['admins'=>'user'])->only(['index','update']);
@@ -62,6 +67,7 @@ Route::prefix('news')->name('news.')->middleware(['auth:sanctum','verified'])->g
 Route::prefix('virus')->name('virus.')->middleware(['auth:sanctum','verified'])->group(function
 (){
     Route::get('virus',[VirusController::class, 'index'])->name('virus.virus');
+    Route::post('virus',[VirusController::class, 'rules'])->name('virus.rules');
 });
 
 Route::prefix('File')->name('File.')->middleware(['auth:sanctum','verified'])->group(function
@@ -77,7 +83,18 @@ Route::prefix('tickets')->name('tickets.')->middleware(['auth:sanctum','verified
     Route::delete('{ticket}',[TicketController::class, 'destroy'])->name('destroy');
 });
 
+Route::get('/chart',function(){
 
+    $chart=(new ArielMejiaDev\LarapexCharts\LarapexChart())->donutChart()
+            ->setTitle('Top 3 scorers of the team.')
+            ->setSubtitle('Season 2021.')
+            ->addData([20, 24, 30])
+            ->setLabels(['Player 7', 'Player 10', 'Player 9'])
+            ->toVue();
+
+    return inertia::render('Chart', compact('chart'));
+
+});
 
 
 

@@ -16,7 +16,7 @@ window.Toast = Swal.mixin({
 import { createApp, h } from 'vue';
 import { createInertiaApp, Link } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
-
+import VueApexCharts from "vue3-apexcharts";
 // import components
 import Multiselect from '@suadelabs/vue3-multiselect'
 
@@ -28,6 +28,7 @@ createInertiaApp({
     setup({ el, app, props, plugin }) {
         return createApp({ render: () => h(app, props) })
             .use(plugin)
+            .use(VueApexCharts)
             .mixin({ methods: { route } })
             .component('multiselect',Multiselect)
             .component('inertia-link',Link)

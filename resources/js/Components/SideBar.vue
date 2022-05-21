@@ -7,14 +7,14 @@
     </inertia-link>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" >
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img src="/assets/img/User_1.jpg" class="img-circle elevation-2" alt="User">
         </div>
         <div class="info">
-          <a :href="route('profile.show')" class="d-block">{{$page.props.user.name}}</a>
+          <a :href="route('profile.show')" class="d-block">{{$page.props.user.email}}</a>
         </div>
       </div>
 
@@ -126,23 +126,9 @@
               </li>
             </ul>
           </li>
-          <li class="nav-header">MISC</li>
-          <li class="nav-item">
-            <inertia-link href="route('dashboard')" class="nav-link">
-              <i class="fas fas fa-home"></i>
-              <p>
-                Site
-              </p>
-            </inertia-link>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" role="button">
-              <i class="fas fas fa-sign-out-alt"></i>
-              <p>
-                Logout
-              </p>
-            </a>
-          </li>
+
+
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

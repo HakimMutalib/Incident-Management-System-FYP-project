@@ -37,7 +37,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            </div>                          
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,18 +90,18 @@
         </div>
         </admin-layout>
     </div>
-   
+
 </template>
 
 <script>
 import AdminLayout from '@/Layouts/AdminLayout'
 export default {
     props: ['roles','admins'],
-    components: { 
+    components: {
         AdminLayout,
         },
-  
-  data() {  
+
+  data() {
       return {
           editedIndex: -1,
           editMode: false,
@@ -133,12 +133,12 @@ export default {
       openModal(){
           this.editedIndex = -1
           $('#modal-lg').modal('show')
-      }, 
+      },
       closeModal(){
           this.form.clearErrors()
           $('#modal-lg').modal('hide')
       },
-       updateAdmins(){ 
+       updateAdmins(){
             this.form.patch(this.route('admin.admins.update' , this.form),{
             preserveScroll: true,
             onSuccess:()=> {
@@ -151,7 +151,7 @@ export default {
                 }
             })
         },
-         
+
     }
 }
 </script>

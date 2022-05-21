@@ -3,7 +3,7 @@
         <admin-layout>
           <section class="content">
                 <div class="container-fluid">
-                  <h1>Cyber News</h1>
+                    <h1>Cyber News</h1>
                     <div class="searchbar">
                       <form @submit.prevent="fetchSearchNews">
                         <div class="input-group">
@@ -18,17 +18,14 @@
                     </div>
                     <ul></ul>
 
-                  <div class="row">
+                    <div class="row">
                       <article v-for="(article, index) in articles" :key="index"  class="col-lg-4 mb-3 d-flex align-items-stretch" >
                               <div class="card-deck ">
                                   <div class="card">
                                         <img class="card-img-top" v-if="article.urlToImage" :src="article.urlToImage" style="width: 100%; height: 15vw; object-fit: cover;" alt="200x200">
                                         <li v-else class="fas fa-image"></li>
                                         <div class="card-body">
-                                          <h2 v-html="article.title" @click="navTo(article.url)" style= cursor:pointer class="underline-on-hover" ></h2>
-                                            <small class="text-muted">
-                                              <h6 v-html="article.author"></h6>
-                                            </small>
+                                          <h2 class="underline-on-hover" v-html="article.title" @click="navTo(article.url)" ></h2>
                                           <p v-html="article.description"></p>
                                         </div>
                                         <div class="card-footer">
@@ -39,7 +36,6 @@
                               </div>
                       </article>
                     </div>
-
                 </div>
           </section>
         </admin-layout>
@@ -52,6 +48,7 @@ import AdminLayout from '@/Layouts/AdminLayout'
 export default {
    components: {
             AdminLayout,
+
         },
   data()  {
       return {
@@ -65,6 +62,7 @@ export default {
         searchword: '',
         articles: [],
         country: 'my'
+
       }
     },
     computed: {
@@ -95,7 +93,7 @@ export default {
         }
       },
       fetchTopNews() {
-        this.apiUrl = 'https://newsapi.org/v2/everything?q=cybersecurity'  +
+        this.apiUrl = 'https://newsapi.org/v2/everything?q=Cyber+security'  +
                         '&pageSize=' + this.maxPerPage +
                         '&apiKey=' + this.apiKey;
         this.isBusy = true;
@@ -120,34 +118,17 @@ export default {
             console.log(error);
           })
       },
-      scrollTrigger() {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if(entry.intersectionRatio > 0 && this.currentPage < this.pageCount) {
-              this.showloader = true;
-              this.currentPage += 1;
-              this.fetchData();
-            }
-          })
-        })
-       
-      }
+
     },
     created() {
       this.fetchTopNews();
     },
-    mounted() {
-      this.scrollTrigger();
-    }
+
 }
 </script>
 
 <style lang="scss" scoped>
-
 .underline-on-hover:hover {
-
     text-decoration: underline;
-
 }
-
 </style>

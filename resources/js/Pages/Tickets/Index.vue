@@ -77,7 +77,7 @@
                                     <div class="card-body">
                                         <div class="form-group" v-if="!editMode" >
                                             <label for="name" class="h4">Name</label>
-                                            <input type="text" class="form-control" placeholder="Name" v-model="form.name" :class="{ 'is-invalid' : form.errors.name }" autofocus="autofocus" autocomplete="off" required >
+                                            <input type="text" class="form-control" placeholder="Name" v-model="form.name" :class="{ 'is-invalid' : form.errors.name }" autofocus="autofocus" autocomplete="off" required readonly disabled>
                                         </div>
                                         <div class="invalid-feedback mb-3" :class="{ 'd-block' : form.errors.name}">
                                             {{ form.errors.name }}
@@ -85,7 +85,7 @@
 
                                         <div class="form-group"  v-if="editMode">
                                             <label for="name" class="h4">Name</label>
-                                            <input type="text" class="form-control" placeholder="Name" v-model="form.name" :class="{ 'is-invalid' : form.errors.name }" autofocus="autofocus" autocomplete="off" readonly  >
+                                            <input type="text" class="form-control" placeholder="Name" v-model="form.name" :class="{ 'is-invalid' : form.errors.name }" autofocus="autofocus" autocomplete="off" readonly disabled  >
                                         </div>
                                         <div class="invalid-feedback mb-3" :class="{ 'd-block' : form.errors.name}">
                                             {{ form.errors.name }}
@@ -93,7 +93,7 @@
 
                                         <div class="form-group" v-if="!editMode">
                                             <label for="email" class="h4">E-mail</label>
-                                            <input type="email" class="form-control" placeholder="E-mail Address" v-model="form.email" :class="{ 'is-invalid' : form.errors.email }" autocomplete="off"   required>
+                                            <input type="email" class="form-control" placeholder="E-mail Address" v-model="form.email" :class="{ 'is-invalid' : form.errors.email }" autocomplete="off"   required readonly>
                                         </div>
                                         <div class="invalid-feedback mb-3" :class="{ 'd-block' : form.errors.email}">
                                             {{ form.errors.email }}
@@ -248,10 +248,11 @@ export default {
                 value:'not assigned',
                 editedIndex: -1,
                 editMode: false,
+                value1:'',
                 form: this.$inertia.form({
                     id: '',
-                    name: '',
-                    email: '',
+                    name: this.$page.props.user.name,
+                    email : this.$page.props.user.email,
                     category:'',
                     description:'',
                     priority:'',

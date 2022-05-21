@@ -5,8 +5,14 @@ namespace App\Http\Controllers\Virus;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Monaz\LaravelVirusTotal\Rules\File;
+use Monaz\LaravelVirusTotal\Rules\Url;
+use Monaz\LaravelVirusTotal\Rules\Ip;
+use Monaz\LaravelVirusTotal\Rules\Domain;
+
 class VirusController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -36,7 +42,9 @@ class VirusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+
     }
 
     /**
@@ -83,4 +91,7 @@ class VirusController extends Controller
     {
         //
     }
+
+
+
 }
