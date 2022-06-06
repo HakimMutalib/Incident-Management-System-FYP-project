@@ -4,7 +4,7 @@
           <section class="content">
                 <div class="container-fluid">
                     <h1>Cyber News</h1>
-                    <div class="searchbar">
+                    <div class="searchbar" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin">
                       <form @submit.prevent="fetchSearchNews">
                         <div class="input-group">
                           <div class="form-outline">
@@ -29,6 +29,8 @@
                                           <p v-html="article.description"></p>
                                         </div>
                                         <div class="card-footer">
+                                          <p>By :</p>
+                                            <p class="font-italic" v-html="article.author"></p>
                                             <p>Published at: </p>
                                             <p v-html="article.publishedAt"></p>
                                         </div>
@@ -61,10 +63,24 @@ export default {
         maxPerPage: 9,
         searchword: '',
         articles: [],
-        country: 'my'
+        country: 'my',
 
       }
+
     },
+
+    mounted() {
+    if (localStorage.searchword) {
+      this.searchword = localStorage.searchword;
+    }
+    },
+
+    watch: {
+    searchword(newSearchword) {
+      localStorage.searchword = newSearchword;
+    }
+    },
+
     computed: {
       pageCount() {
         return Math.ceil(this.totalResults/this.maxPerPage);
@@ -93,11 +109,10 @@ export default {
         }
       },
       fetchTopNews() {
-        this.apiUrl = 'https://newsapi.org/v2/everything?q=Cyber+security'  +
+        this.apiUrl = 'https://newsapi.org/v2/everything?q=' + localStorage.searchword +
                         '&pageSize=' + this.maxPerPage +
                         '&apiKey=' + this.apiKey;
         this.isBusy = true;
-        this.searchword = '';
 
         this.resetData();
         this.fetchData();

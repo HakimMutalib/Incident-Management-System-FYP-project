@@ -1,4 +1,5 @@
 <template>
+<div class="p-3 mb-2 bg-dark text-white">
   <app-layout title="Profile">
     <template #header>
       <h2 class="h4 font-weight-bold">
@@ -32,6 +33,7 @@
       <delete-user-form />
     </template>
   </app-layout>
+</div>
 </template>
 
 <script>

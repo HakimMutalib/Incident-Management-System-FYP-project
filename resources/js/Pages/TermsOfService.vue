@@ -7,7 +7,7 @@
         <jet-authentication-card-logo />
       </div>
 
-      <div class="card shadow-sm">
+      <div class="card shadow-sm:rounded-3" style="background-color:black">
         <div v-html="terms" class="card-body">
         </div>
       </div>

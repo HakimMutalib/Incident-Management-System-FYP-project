@@ -18,6 +18,53 @@
                         </div>
                         <!-- end row -->
                     </div>
+                    <!-- nOTIFICATION -->
+                    <div class="row" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin">
+                        <div class="col-lg-12">
+                             <div class="card " style="background-color: rgb(23,29,40)">
+                                <div class="card-header">Notifications</div>
+                                    <div class="card-body">
+                                        <div v-if="unreadnotifications.length > 0">
+                                            <div v-for="(unread, index) in unreadnotifications" :key="index">
+                                                <p class="alert alert-success" v-if="type === 'App\\Notifications\\AdminTicketUpdate'">{{unread.data.name}} ({{unread.data.email}}) ticket has been updated on {{unread.updated_at}}.</p>
+                                            </div>
+                                        </div>
+
+                                        <div v-if="unreadnotifications.length > 0">
+                                            <div v-for="(unread, index) in unreadnotifications" :key="index">
+                                                <p class="alert alert-success" v-if="type === 'App\\Notifications\\AdminTicketMake'">{{unread.data.name}} ({{unread.data.email}}) has created a ticket on {{unread.created_at}}.</p>
+                                            </div>
+                                        </div>
+                                    <a  v-show="unreadnotifications.length > 0" @click="markAsRead">Mark all as read!</a>
+                                    <a  v-show="unreadnotifications.length == 0">No new notifications</a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row" v-else >
+                        <div class="col-lg-12">
+                             <div class="card " style="background-color: rgb(23,29,40)">
+                                <div class="card-header">Notifications</div>
+                                    <div class="card-body">
+                                        <div v-if="unreadnotifications.length > 0">
+                                            <div v-for="(unread, index) in unreadnotifications" :key="index">
+                                                <p class="alert alert-success" v-if="type === 'App\\Notifications\\TicketNotification'">Hi {{unread.data.name}} ({{unread.data.email}}), your ticket has been created on {{unread.created_at}}.</p>
+                                            </div>
+                                        </div>
+
+                                        <div v-if="unreadnotifications.length > 0">
+                                            <div v-for="(unread, index) in unreadnotifications" :key="index">
+                                                <p class="alert alert-success" v-if="type === 'App\\Notifications\\UpdateTicket'">Hi {{unread.data.name}} ({{unread.data.email}}) ticket has been updated on {{unread.updated_at}}.</p>
+                                            </div>
+                                        </div>
+                                    <a  v-show="unreadnotifications.length > 0" @click="markAsRead">Mark all as read!</a>
+                                    <a  v-show="unreadnotifications.length == 0">No new notifications</a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END OF nOTIFICATION -->
                     <!-- end page-title -->
                     <div class="row">
                         <div class="col-sm-6 col-xl-6">
@@ -99,6 +146,39 @@
     import AdminLayout from '@/Layouts/AdminLayout'
     import VueApexCharts from "vue3-apexcharts";
       export default {
+        data(){
+            return {
+                unreadnotifications: {},
+                type: [],
+            }
+        },
+        mounted() {
+            this.getNotifications();
+            this.interval = setInterval(function() {
+                this.getNotifications()
+            }.bind(this), 500);
+        },
+
+        methods: {
+            getNotifications(){
+                axios.get('dashboard/unreadNotifications')
+                .then((response) => {
+                    console.log(response)
+                    this.unreadnotifications = response.data
+                    this.type =response.data[0].type
+                }).catch((errors) => {
+                    console.log(errors)
+                });
+            },
+            markAsRead(){
+                axios.get('dashboard/markAsRead').then((response) => {
+                    location.reload()
+                }).catch((errors) => {
+                    console.log(errors)
+                });
+            },
+        },
+
         props:
          {
             chart: Object,

@@ -2,6 +2,7 @@
 use App\Http\Controllers\Admins\AdminDashboardController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
 use App\Http\Controllers\Admins\RoleController;
 use App\Http\Controllers\Admins\PermissionController;
@@ -48,7 +49,10 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum','verified'])-
 
 
     Route::get('dashboard',[AdminDashboardController::class, 'index'])->name('dashboard.index');
-
+    Route::get('dashboard/markAsRead',[AdminDashboardController::class, 'markAsRead']);
+    Route::get('dashboard/unreadNotifications',[AdminDashboardController::class, 'unreadNotifications']);
+    Route::get('dashboard/updateNotification',[AdminDashboardController::class, 'updateNotification']);
+    
     Route::resource('admins',AdminController::class)->parameters(['admins'=>'user'])->only(['index','update']);
 
     Route::resource('users',UserController::class)->except(['create','show','edit']);
@@ -67,7 +71,7 @@ Route::prefix('news')->name('news.')->middleware(['auth:sanctum','verified'])->g
 Route::prefix('virus')->name('virus.')->middleware(['auth:sanctum','verified'])->group(function
 (){
     Route::get('virus',[VirusController::class, 'index'])->name('virus.virus');
-    Route::post('virus',[VirusController::class, 'rules'])->name('virus.rules');
+    
 });
 
 Route::prefix('File')->name('File.')->middleware(['auth:sanctum','verified'])->group(function
@@ -96,6 +100,7 @@ Route::get('/chart',function(){
 
 });
 
+Route::get('/send-alert',[AlertController::class,'sendAlert']);
 
 
 

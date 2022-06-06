@@ -13,7 +13,7 @@
 
     <div class="col-md-8">
       <form @submit.prevent="$emit('submitted')">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm:rounded-3" style="background-color:black">
           <div class="card-body">
             <slot name="form"></slot>
           </div>

@@ -12,11 +12,14 @@ use Spatie\Permission\Guard;
 use Spatie\Permission\PermissionRegistrar;
 use Spatie\Permission\Traits\HasRoles;
 use Spatie\Permission\Traits\RefreshesPermissionCache;
+use Illuminate\Notifications\Notifiable;
+
 
 class Ticket extends Model
 {
     use HasRoles;
     use RefreshesPermissionCache;
+    use Notifiable;
 
 
 

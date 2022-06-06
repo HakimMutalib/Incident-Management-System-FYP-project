@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use app\Models\User;
 use App\Models\Ticket;
 use ArielMejiaDev\LarapexCharts\LarapexChart;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -135,6 +136,7 @@ class AdminDashboardController extends Controller
 
         $now = Carbon::now();
         $ago = $now->subDays(3);
+        $Notifications = auth()->user()->unreadNotifications;
         return Inertia::render('Admins/Dashboard',[
             'users' => User::where('is_admin',0)->whereDate('created_at', '>' , $ago) ->count(),
             'ticket' =>Ticket::where('status', '=', 'In Progress')->count(),
@@ -148,6 +150,28 @@ class AdminDashboardController extends Controller
 
 
 
+
+    }
+
+    public function unreadNotifications()
+    {
+        $unreadNotifications = Auth::user()->unreadNotifications;
+        return response()->json($unreadNotifications);
+
+    }
+
+    public function markAsRead()
+    {
+        Auth::user()->notifications->markAsRead();
+        return response()->json('success');
+
+    } 
+
+    public function updateNotification()
+    {
+        $user = App\Models\User::find(1);
+        $unreadNotifications = $user->unreadNotifications;
+        return response()->json($unreadNotifications);
 
     }
 

@@ -1,58 +1,60 @@
 <template>
-  <Head title="Log in" />
+<div class="p-3 mb-2 bg-dark text-white">
+    <Head title="Log in" />
 
-  <jet-authentication-card>
-    <template #logo>
-      <jet-authentication-card-logo />
-    </template>
+    <jet-authentication-card>
+      <template #logo>
+        <img src="/assets/img/IMS Logo.png" alt="IMS Logo" class="img-fluid">
+      </template>
 
-    <div class="card-body" >
+      <div class="card-body" style="background-color:black">
 
-      <jet-validation-errors class="mb-3" />
+        <jet-validation-errors class="mb-3" />
 
-      <div v-if="status" class="alert alert-success mb-3 rounded-0" role="alert">
-        {{ status }}
+        <div v-if="status" class="alert alert-success mb-3 rounded-0" role="alert">
+          {{ status }}
+        </div>
+  
+        <form  @submit.prevent="submit">
+          <div class="mb-3">
+            <jet-label  for="email" value="Email" />
+            <jet-input id="email" type="email" v-model="form.email" required autofocus />
+          </div>
+
+          <div class="mb-3">
+            <jet-label  for="password" value="Password" />
+            <jet-input id="password" type="password" v-model="form.password" required autocomplete="current-password" />
+          </div>
+
+          <div class="mb-3">
+            <div class="custom-control custom-checkbox">
+              <jet-checkbox id="remember_me" name="remember" v-model:checked="form.remember" />
+
+              <label class="custom-control-label" for="remember_me">
+                Remember Me
+              </label>
+            </div>
+          </div>
+
+          <div class="mb-0">
+            <div class="d-flex justify-content-end align-items-baseline">
+              <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted me-3">
+                Forgot your password?
+              </Link>
+
+              <jet-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
+                <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+
+                Log in
+              </jet-button>
+            </div>
+          </div>
+        </form>
       </div>
-
-      <form @submit.prevent="submit">
-        <div class="mb-3">
-          <jet-label for="email" value="Email" />
-          <jet-input id="email" type="email" v-model="form.email" required autofocus />
-        </div>
-
-        <div class="mb-3">
-          <jet-label for="password" value="Password" />
-          <jet-input id="password" type="password" v-model="form.password" required autocomplete="current-password" />
-        </div>
-
-        <div class="mb-3">
-          <div class="custom-control custom-checkbox">
-            <jet-checkbox id="remember_me" name="remember" v-model:checked="form.remember" />
-
-            <label class="custom-control-label" for="remember_me">
-              Remember Me
-            </label>
-          </div>
-        </div>
-
-        <div class="mb-0">
-          <div class="d-flex justify-content-end align-items-baseline">
-            <Link v-if="canResetPassword" :href="route('password.request')" class="text-muted me-3">
-              Forgot your password?
-            </Link>
-
-            <jet-button class="ms-4" :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
-              <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-
-              Log in
-            </jet-button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </jet-authentication-card>
+    </jet-authentication-card>
+  </div>
 </template>
 
 <script>

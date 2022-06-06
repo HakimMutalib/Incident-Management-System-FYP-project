@@ -4,11 +4,11 @@
 
     <jet-banner />
 
-    <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom sticky-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-dark text-white  sticky-top rounded-3" >
       <div class="container">
         <!-- Logo -->
         <Link class="navbar-brand me-4" :href="route('dashboard')">
-          <jet-application-mark width="36" />
+          <img src="/assets/img/IMS Logo.png" alt="IMS Logo" width="100" class="img-fluid">
         </Link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -18,7 +18,9 @@
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav me-auto">
             <jet-nav-link :href="route('admin.dashboard.index')" :active="route().current('admin.dashboard.index')">
-              Dashboard
+              <div class="text-white">
+              Incident Management System
+              </div>
             </jet-nav-link>
           </ul>
 
@@ -79,9 +81,11 @@
                 <img v-if="$page.props.jetstream.managesProfilePhotos" class="rounded-circle" width="32" height="32" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name" />
 
                 <span v-else>
+                  <div class="text-white">
                   {{ $page.props.user.name }}
+                  </div>
 
-                  <svg class="ms-2" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <svg class="ms-2 text-white" width="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
                   </svg>
                 </span>
@@ -117,7 +121,7 @@
     </nav>
 
     <!-- Page Heading -->
-    <header class="d-flex py-3 bg-white shadow-sm border-bottom">
+    <header class="d-flex py-3 bg-dark shadow-sm  rounded-3">
       <div class="container">
         <slot name="header"></slot>
       </div>

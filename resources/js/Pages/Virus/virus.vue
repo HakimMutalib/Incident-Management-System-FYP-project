@@ -2,29 +2,23 @@
     <div>
         <admin-layout>
             <div class="container-fluid">
-                <h1>Virus Scanner</h1>
-                <div class="text-center">
-                    <i class="fas fa-desktop fa-10x"></i>
-                </div>
+                <div class="d-flex justify-content-center">
+                    <h1>Website Malware Scanner</h1>
+                </div><br>
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="text-center">
+                            <div >
+                                <img src="/assets/img/undraw_coding_re_iv62.svg"  width="304" height="236">
+                            </div>
+                        </div>
                 <br><br>
                 <div class="text-center">
                     <p>Analyze suspicious files, domains, IPs and URLs to detect malware</p>
                 </div>
                 <br>
                 <br>
-                <div class="text-center">
-                            <div v-if="results == 'clean site'">
-                                <h3>{{message}}</h3>
-                                <h1 class="glow">{{results}}</h1>
-                            </div>
-
-                            <div v-else>
-                                <h3>{{message}}</h3>
-                                <h1 class="dim">{{results}}</h1>
-                            </div>
-                        </div>
-                        <br><br>
-                <div class="container">
+                <div class="container"> 
                     <div class="mx-auto" style="width: 100;">
                         <div class="input-group rounded">
                         <input type="search" class="form-control rounded" placeholder="Enter the website here" v-model="searchword" />
@@ -32,12 +26,58 @@
                             <i class="fas fa-search" @click="GetData"></i>
                         </button>
                         </div>
-                        <br><br>
+                    </div>
+                </div> 
+                        <br>
+                        <div class="card-footer">
+                <div class="container">
+                    <div class="mx-auto" style="width: 100;">
+                        <div class="text-center">
+                            <br>
+                               <h3>{{message}}</h3>
+                               <br>
 
+                            <table class="table table-bordered table-dark">
+                            <thead>
+                                <tr>
+                                <th scope="col">Anti Virus</th>
+                                <th scope="col">Results</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row">AutoShun</th>
+                                <td>{{results1}}</td>
+                                </tr>
 
+                                <tr>
+                                <th scope="row">CRDF</th>
+                                <td>{{results2}}</td>
+                                </tr>
+
+                                <tr>
+                                <th scope="row">CyRadar</th>
+                                <td>{{results3}}</td>
+                                </tr>
+
+                                <tr>
+                                <th scope="row">Forcepoint ThreatSeeker</th>
+                                <td>{{results4}}</td>
+                                </tr>
+
+                                <tr>
+                                <th scope="row">Fortinet</th>
+                                <td>{{results5}}</td>
+                                </tr>
+                            </tbody>
+                            </table>
+
+                        </div>
                     </div>
 
-
+                </div>
+                </div>
+                </div>
                 </div>
             </div>
 
@@ -61,7 +101,11 @@ data() {
             apiUrl:'',
             searchword:'',
             allinfo : true,
-            results:'',
+            results1:'',
+            results2:'',
+            results3:'',
+            results4:'',
+            results5:'',
             message:'',
             errors:[]
 
@@ -74,7 +118,11 @@ data() {
             .then(response => response.json())
             .then(response => {
                                 console.log(response)
-                                this.results = response.scans.CyRadar.result
+                                this.results1 = response.scans.AutoShun.result
+                                this.results2 = response.scans.CRDF.result
+                                this.results3 = response.scans.CyRadar.result
+                                this.results4 = response.scans["Forcepoint ThreatSeeker"].result
+                                this.results5 = response.scans.Fortinet.result
                                 this.message = response.verbose_msg
                                 })
             .catch(err => console.error(err));
@@ -89,40 +137,3 @@ data() {
 
 
 </script>
-
-<style>
-.glow {
-  font-size: 50px;
-  color: #fff;
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #008000, 0 0 40px #008000, 0 0 50px #008000, 0 0 60px #008000, 0 0 70px #008000;
-  }
-
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00, 0 0 60px #00FF00, 0 0 70px #00FF00, 0 0 80px #00FF00;
-  }
-}
-
-.dim {
-  font-size: 50px;
-  color: #fff;
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes dim {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FF0000, 0 0 40px #FF0000, 0 0 50px #FF0000, 0 0 60px #FF0000, 0 0 70px #FF0000;
-  }
-
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #FF2400, 0 0 40px #FF2400, 0 0 50px #FF2400, 0 0 60px #FF2400, 0 0 70px #FF2400, 0 0 80px #FF2400;
-  }
-}
-
-</style>

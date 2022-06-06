@@ -7,6 +7,15 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Inertia\Inertia;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\TicketNotification;
+use App\Notifications\UpdateTicket;
+use App\Notifications\DeleteTicket;
+use App\Notifications\AdminTicketMake;
+use App\Notifications\AdminTicketUpdate;
+use Illuminate\Support\Facades\Auth;
+
 
 class TicketController extends Controller
 {
@@ -41,8 +50,8 @@ class TicketController extends Controller
      */
     public function store(Request $request)
     {
-
-
+        $admin = User::where('is_admin', '=' ,'1')->get();
+        $user = Auth::user();
         $ticket = Ticket::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -52,6 +61,12 @@ class TicketController extends Controller
             'status' =>$request->status ?? 'In Progress',
             'assignee' =>$request->assignee ?? 'Not Assigned',
         ]);
+
+        Notification::sendNow($admin,new AdminTicketMake($ticket));
+        Notification::sendNow($user,new TicketNotification($ticket));
+
+
+
         return back();
     }
 
@@ -63,7 +78,7 @@ class TicketController extends Controller
      */
     public function show(Ticket $ticket)
     {
-        //
+        
     }
 
     /**
@@ -86,6 +101,10 @@ class TicketController extends Controller
      */
     public function update(Request $request, Ticket $ticket)
     {
+
+        $admin = User::where('is_admin', '=' ,'1')->get();
+        $user = User::where ('email','=',$request->email)->get();
+
         if ($request->has('name')){
             $ticket->givePermissionTo(collect($request->assignee)->pluck('id')->toArray());
         }
@@ -93,6 +112,12 @@ class TicketController extends Controller
             'assignee' => $request->assignee['name'],
             'status' => $request->status,
         ]);
+
+        Notification::sendNow($admin,new AdminTicketUpdate($ticket));
+        Notification::sendNow($user,new UpdateTicket($ticket));
+       // $ticket->notify(new UpdateTicket($ticket));
+       
+
         return back();
     }
 
@@ -105,7 +130,10 @@ class TicketController extends Controller
     public function destroy(Ticket $ticket)
     {
 
+        $admin = User::where('is_admin', '=' ,'1')->get();
+
         $ticket->delete();
+        Notification::sendNow($admin,new DeleteTicket($ticket));
         return back();
     }
 }

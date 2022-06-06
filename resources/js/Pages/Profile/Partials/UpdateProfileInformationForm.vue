@@ -1,5 +1,5 @@
 <template>
-  <jet-form-section @submitted="updateProfileInformation">
+  <jet-form-section @submitted="updateProfileInformation" >
     <template #title>
       Profile Information
     </template>
@@ -8,7 +8,7 @@
       Update your account's profile information and email address.
     </template>
 
-    <template #form>
+    <template #form >
       <jet-action-message :on="form.recentlySuccessful">
         Saved.
       </jet-action-message>
@@ -45,7 +45,7 @@
 
       <div class="w-75">
         <!-- Name -->
-        <div class="mb-3">
+        <div style="background-color:black">
           <jet-label for="name" value="Name" />
           <jet-input id="name" type="text" v-model="form.name"
                      :class="{ 'is-invalid': form.errors.name }" autocomplete="name" />
@@ -53,7 +53,7 @@
         </div>
 
         <!-- Email -->
-        <div class="mb-3">
+        <div style="background-color:black">
           <jet-label for="email" value="Email" />
           <jet-input id="email" type="email" v-model="form.email"
                      :class="{ 'is-invalid': form.errors.email }" />
@@ -64,7 +64,7 @@
 
     <template #actions>
       <jet-button :class="{ 'text-white-50': form.processing }" :disabled="form.processing">
-        <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status">
+        <div v-show="form.processing" class="spinner-border spinner-border-sm" role="status" >
           <span class="visually-hidden">Loading...</span>
         </div>
 

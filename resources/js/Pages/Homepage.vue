@@ -1,125 +1,2003 @@
-
 <template>
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Article-Clean.css">
-    <link rel="stylesheet" href="assets/css/divider-text-middle.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Features-Clean.css">
-    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/Team-Clean.css">
-    </head>
-    <div>
-        <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background-color: rgb(23,29,40);padding: 16px;">
-        <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><img src="assets/img/IMS%20Logo.png" width="250" height="250" style="margin: -72px;">
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"></li>
-                </ul>
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link text-white" :href="route('admin.dashboard.index')">Dashboard</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link text-white" :href="route('login')">Login</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link text-white" :href="route('register')">Register</a></li>
-                </ul>
-        </div>
-        </div>
-    </nav>
-    <div class="article-clean" style="background-color: #1c2431;height: 576px;">
-        <div class="container" style="width: 1369px;">
-            <div class="row">
-                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2" style="width: 750px;padding: 0px;">
-                    <div class="intro">
-                        <p class="text-center"> </p><img src="assets/img/undraw_security_on_re_e491%20(1).svg" width="500" height="250" style="width: 759px;"></div>
-                    <h4 class="text-center text-white" style="height: 79px;font-family: 'Encode Sans Condensed', sans-serif;">Cybersecurity Incident Management System where managing security incidents made easy.<br><br><br></h4>
-                    <div class="text">
-                        <p class="text-center text-white" style="height: 138px;font-family: 'Encode Sans Condensed', sans-serif;"><br>Incident Management System (IMS) is aimed to serve small medium enterprise (SMEs) in Malaysia<br><br><br><button class="btn btn-primary"  type="button" style="height: 42px;width: 129px;filter: grayscale(0%) hue-rotate(0deg) saturate(200%) sepia(0%);font-family: 'Encode Sans Condensed', sans-serif;"><a class="nav-link text-white" :href="route('register')">Get Started</a></button></p>
-                        <figure></figure>
-                        <section></section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="features-clean" style="background-color: rgb(28,36,49);">
-        <div style="text-align:center;"></div>
-        <div style="text-align:center;">
-            <h2 class="divider-style" style="height: 23px;padding: 42px;margin: -2px;filter: brightness(200%) invert(100%);"></h2>
-        </div>
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center text-white" style="font-family: 'Encode Sans Condensed', sans-serif;">Features</h2>
-                <p class="text-center text-white" style="font-family: 'Encode Sans Condensed', sans-serif;"></p>
-            </div>
-            <div class="row features">
-                <div class="col-sm-6 col-lg-4 item"><img src="assets/img/undraw_security_re_a2rk%20(1).svg" width="220" height="150" style="margin: 5px;">
-                    <h3 class="text-white name">Manage Security Incidents</h3>
-                    <p class="text-white description">Allows SMEs to manage cybersecurity incidents that occurs in the company.</p>
-                </div>
-                <div class="col-sm-6 col-lg-4 item"><img src="assets/img/undraw_co_workers_re_1i6i%20(1).svg" width="220" height="150" style="margin: 5px;">
-                    <h3 class="text-white name">Cyber News</h3>
-                    <p class="text-white description">Stays up to date on latest cybersecurity news.</p>
-                </div>
-                <div class="col-sm-6 col-lg-4 item"><img src="assets/img/undraw_short_bio_re_fmx0%20(1).svg" width="220" height="150" style="margin: 5px;">
-                    <h3 class="text-white name">File/Website Virus Scanner</h3>
-                    <p class="text-white description">Using a real-time malware scanner, users can check whether files and websites are safe to be used.</p>
-                </div>
-            </div>
-        </div>
-        <div style="text-align:center;">
-            <h2 class="divider-style" style="filter: brightness(200%) grayscale(0%) hue-rotate(0deg) invert(100%);"></h2>
-        </div>
-    </div>
-    <div class="border-dark shadow-sm team-clean" style="background-color: rgb(28,36,49);">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center text-white">The Team </h2>
-                <p class="text-center">We are fourth year student from International Islamic University of Malaysia.</p>
-            </div>
-        </div>
-    </div>
-    <div style="color: rgb(241,255,255);background-color: #1c2431;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="assets/img/image8.jpeg" style="width: 350px;height: 350px" >
-                    <h3 class="name">Hakim Mutalib</h3>
-                    <p class="title">Bachelor of Information Technology</p>
-                    <p class="description"> </p>
-                </div>
-                <div class="col item" style="width: 367px;">
-                    <div class="social"><a href="#"></a><a href="#"></a><a href="#"></a>
-                        <div class="col ml-auto" style="width: 380px;margin: 0px;"><img class="rounded-circle" src="assets/img/image9.jpg" style="width: 350px;height: 350px">
-                            <h3 class="name">Amirul Aiman</h3>
-                            <p class="title">Bachelor of Information Technology</p>
-                            <p class="description"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-dark" style="background-color: #1a212d;">
-        <footer>
-            <div class="container">
-                <div class="row">
+<head>
 
-                    <div class="col item social"><a href="#"><i class="fa-brands fa-github"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                </div>
-                <p class="copyright">CIMS © 2022</p>
+  <title>Arsha Bootstrap Template - Index</title>
+
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+
+
+
+
+  <!-- =======================================================
+  * Template Name: Arsha - v4.7.1
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="navbar-fixed-top" style="background-color: rgb(23,29,40)">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">CIMS</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#about">Dashboard</a></li>
+          <li><a class="getstarted scrollto" href="#about">Login</a></li>
+          <li><a class="getstarted scrollto" href="#about">Register</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>We are here to provide platforms for SMEs' in incident handling.</h1>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about" style="background-color: rgb(23,29,40)">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 class="text-white">About Us</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p class="text-white text-justify">
+              Our project objective is to develop a web application for incident reports for the employees to report to their security IT manager.
+            </p>
+            <p class="text-white text-justify">
+              Below are the objectives for our project:
+            </p>
+            <ul>
+              <li class="text-white"><i class="ri-check-double-line"></i> To develop a Web-based Cyber Security Incident Management to help SMEs in Malaysia manage IT and cyber security-related incidents.</li>
+              <li class="text-white"><i class="ri-check-double-line"></i> To provide free tools for employees to report cyber security incidents that happen in their organisation and scan malware in files/websites.</li>
+              <li class="text-white"><i class="ri-check-double-line"></i> To analyze and mitigate cyber security incidents that occurs in the organization.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p class="text-white text-justify">
+              By the end of the project, we hope that users can use the main features or purpose of our project which is reporting any incidents that happen in their company using our web application.
+            </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              <h3 class="text-white">Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
+              <p class="text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              </p>
             </div>
-        </footer>
+
+            <div class="accordion-list"  >
+              <ul>
+                <li style="background-color:#121212">
+                  <a data-bs-toggle="collapse" class="collapse text-white" data-bs-target="#accordion-list-1" ><span>01</span>Who will benefit from this project?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list" >
+                    <p class="text-white">
+                     This web application project will primarily allow small and medium-sized enterprises (SMEs) to better run their businesses. Using the Incidents Management System that we design, any issues that occur in their enterprise may be logged and resolved.
+                    </p>
+                  </div>
+                </li>
+
+                <li style="background-color:#121212">
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed text-white"><span>02</span> What can this project do to businesses <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p class="text-white">
+                       We also feel that this effort will aid us in our field of study. We think that our initiative will have a good influence on society by assisting all SMEs in competing with larger companies in the market.
+                    </p>
+                  </div>
+                </li>
+
+                <li style="background-color:#121212">
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed text-white"><span>03</span> What can you expect from this project? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p class="text-white">
+                      we expect that by implementing our initiative, we will be able to raise cybersecurity knowledge among staff, allowing us to tackle similar problems more effectively in the future.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="services" class="services section-bg" style="background-color:#181824">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Features</h2>
+          <p class="text-white">CIMS provides 8 main features to help with organizations on solving incidents that occurs within the organization</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch p-1" data-aos="zoom-in" data-aos-delay="100" >
+            <div class="icon-box">
+              <div class="icon"><i class='bx bxs-coupon'></i></div>
+              <h4><a href="">Incident Reporting</a></h4>
+              <p class="text-white">Employees can report any type of incident with details that happen in the company. For example, the type of incident, how and when the incident happens, and the severity of the incident that happened.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 p-1"  data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class='bx bx-receipt'></i></div>
+              <h4><a href="">Cyber News</a></h4>
+              <p class="text-white">News about the IT world that is mostly on cybersecurity attacks will be on the main page for the employees to browse.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class='bx bx-file-find'></i></div>
+              <h4><a href="">Malware File Scanning</a></h4>
+              <p class="text-white">Scan files for malware using our scanning tools.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class='bx bx-code-curly' ></i></div>
+              <h4><a href="">Malware Website Scanning</a></h4>
+              <p class="text-white">Scan websites or URL using our scanning tools</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class='bx bx-group'></i></div>
+              <h4><a href="">Manage Incidents</a></h4>
+              <p class="text-white">Admin can assign workers to solve the incident from the worker database and Admin can resolve the incident and close the ticket of the incident</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Dashboard</a></h4>
+              <p class="text-white">Admin can see the dashboard that contains the analytic of the visualisation data on the companys' incidents.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class='bx bxs-user-detail'></i></div>
+              <h4><a href="">Admin Panel</a></h4>
+              <p class="text-white">Our system provides admins adminstration tools for admins to manage their employees in the organization</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class='bx bxs-bell-ring' ></i></div>
+              <h4><a href="">Notifications</a></h4>
+              <p class="text-white">Get email alert when new incidents occur within the organization</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio" style="background-color:#171D28">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>User Interface</h2>
+          <p class="text-white">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active text-white" >All</li>
+          <li data-filter=".filter-app" class="text-white">App</li>
+          <li data-filter=".filter-card" class="text-white">Card</li>
+          <li data-filter=".filter-web" class="text-white">Web</li>
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/Dashboard.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Dashboard</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/Ticket.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Ticket Page</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/CyberNews.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Cyber News Page</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/VirusScanner.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>URL Malware Scanner</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/VirusScanner2.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>File Malware Scanner</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/portfolio/User.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>User Page</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/Admin.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Admin Page</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/portfolio/RolePerm.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Role And Permission</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/portfolio/Permission.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Permission Page</h4>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Meet The Team</h2>
+          <p class="text-white">We are a commited final year students that are here to tackle all sorts of challenge</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start" style="background-color:#121212" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><div></div><img src="assets/img/team/image8.jpeg" class="img-fluid"  alt=""></div>
+              <div class="member-info">
+                <h4 class="text-white">Hakim Mutalib</h4>
+                <span class="text-white"></span>
+                <p class="text-white">Fourth year BIT student specialized in Information Assurance and Security</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start" style="background-color:#121212" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><div></div><img src="assets/img/team/image9.jpg" class="img-fluid"  alt=""></div>
+              <div class="member-info">
+                <h4 class="text-white">Amirul Aiman</h4>
+                <span class="text-white"></span>
+                <p class="text-white">Fourth year BIT student specialized in Business Information Analytics and Data Science</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
+
+
+    </section><!-- End Team Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+
+    <div class="footer-top" style="background-color:#0A0A0F">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>CIMS</h3>
+            <p class="text-white">
+            This project is still under construction and it is not production ready.
+            </p>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4></h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix" style="background-color:#171d28 " >
+      <div class="copyright">
+        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
 </body>
-    </div>
 </template>
 
+
+<script src="C:\Users\amiru\Documents\GitHub\Incident-Management-System-FYP-project\public\assets\js\main.js"></script>
+
+<style lang="scss" scoped>
+.body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #47b2e4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #73c5eb;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Jost", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+// #preloader {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 9999;
+//   overflow: hidden;
+//   background: #37517e;
+// }
+
+// #preloader:before {
+//   content: "";
+//   position: fixed;
+//   top: calc(50% - 30px);
+//   left: calc(50% - 30px);
+//   border: 6px solid #37517e;
+//   border-top-color: #fff;
+//   border-bottom-color: #fff;
+//   border-radius: 50%;
+//   width: 60px;
+//   height: 60px;
+//   -webkit-animation: animate-preloader 1s linear infinite;
+//   animation: animate-preloader 1s linear infinite;
+// }
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #47b2e4;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: #6bc1e9;
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+}
+#header.header-scrolled, #header.header-inner-pages {
+  background: #000;
+}
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#header .logo a {
+  color: #fff;
+}
+#header .logo img {
+  max-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation
+*/
+.navbar {
+  padding: 0;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.726);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #31a9e1;
+}
+.navbar .getstarted, .navbar .getstarted:focus {
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  border: 2px solid #47b2e4;
+  font-weight: 600;
+}
+.navbar .getstarted:hover, .navbar .getstarted:focus:hover {
+  color: #fff;
+  background: #31a9e1;
+}
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+  color: #0c3c53;
+}
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #47b2e4;
+}
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(40, 58, 90, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+.navbar-mobile a, .navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #37517e;
+}
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+  color: #47b2e4;
+}
+.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+  margin: 15px;
+  color: #37517e;
+}
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+  color: #47b2e4;
+}
+.navbar-mobile .dropdown > .dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 80vh;
+  background: #000000fa;
+}
+#hero .container {
+  padding-top: 72px;
+}
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+#hero h2 {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+#hero .btn-get-started {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #47b2e4;
+}
+#hero .btn-get-started:hover {
+  background: #209dd8;
+}
+#hero .btn-watch-video {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  margin: 10px 0 0 25px;
+  color: #fff;
+  line-height: 1;
+}
+#hero .btn-watch-video i {
+  line-height: 0;
+  color: #fff;
+  font-size: 32px;
+  transition: 0.3s;
+  margin-right: 8px;
+}
+#hero .btn-watch-video:hover i {
+  color: #47b2e4;
+}
+#hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@media (max-width: 991px) {
+  #hero {
+    height: 100vh;
+    text-align: center;
+  }
+  #hero .animated {
+    -webkit-animation: none;
+    animation: none;
+  }
+  #hero .hero-img {
+    text-align: center;
+  }
+  #hero .hero-img img {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero .hero-img img {
+    width: 70%;
+  }
+}
+@media (max-width: 575px) {
+  #hero .hero-img img {
+    width: 80%;
+  }
+  #hero .btn-get-started {
+    font-size: 16px;
+    padding: 10px 24px 11px 24px;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #1b1d2c;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #ffff;
+}
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ffffff;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+.clients {
+  padding: 12px 0;
+  text-align: center;
+}
+.clients img {
+  max-width: 45%;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  padding: 15px 0;
+  filter: grayscale(100);
+}
+.clients img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .clients img {
+    max-width: 40%;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+.about .content ul li {
+  padding-left: 28px;
+  position: relative;
+}
+.about .content ul li + li {
+  margin-top: 10px;
+}
+.about .content ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #47b2e4;
+  line-height: 1;
+}
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+.about .content .btn-learn-more {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #47b2e4;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid #47b2e4;
+}
+.about .content .btn-learn-more:hover {
+  background: #47b2e4;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Why Us
+--------------------------------------------------------------*/
+.why-us .content {
+  padding: 60px 100px 0 100px;
+}
+.why-us .content h3 {
+  font-weight: 400;
+  font-size: 34px;
+  color: #37517e;
+}
+.why-us .content h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+.why-us .content p {
+  font-size: 15px;
+  color: #848484;
+}
+.why-us .img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.why-us .accordion-list {
+  padding: 0 100px 60px 100px;
+}
+.why-us .accordion-list ul {
+  padding: 0;
+  list-style: none;
+}
+.why-us .accordion-list li + li {
+  margin-top: 15px;
+}
+.why-us .accordion-list li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+.why-us .accordion-list a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding-right: 30px;
+  outline: none;
+  cursor: pointer;
+}
+.why-us .accordion-list span {
+  color: #47b2e4;
+  font-weight: 600;
+  font-size: 18px;
+  padding-right: 10px;
+}
+.why-us .accordion-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.why-us .accordion-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+.why-us .accordion-list .icon-show {
+  display: none;
+}
+.why-us .accordion-list a.collapsed {
+  color: #343a40;
+}
+.why-us .accordion-list a.collapsed:hover {
+  color: #47b2e4;
+}
+.why-us .accordion-list a.collapsed .icon-show {
+  display: inline-block;
+}
+.why-us .accordion-list a.collapsed .icon-close {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .why-us .content, .why-us .accordion-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 992px) {
+  .why-us .img {
+    min-height: 400px;
+  }
+  .why-us .content {
+    padding-top: 30px;
+  }
+  .why-us .accordion-list {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .why-us .img {
+    min-height: 200px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .content h3 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #37517e;
+  font-family: "Poppins", sans-serif;
+}
+.skills .content ul {
+  list-style: none;
+  padding: 0;
+}
+.skills .content ul li {
+  padding-bottom: 10px;
+}
+.skills .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #47b2e4;
+}
+.skills .content p:last-child {
+  margin-bottom: 0;
+}
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+.skills .progress .skill {
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #37517e;
+}
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+.skills .progress-bar-wrap {
+  background: #e8edf5;
+  height: 10px;
+}
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #4668a2;
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  transition: all ease-in-out 0.4s;
+  background: #121212;
+}
+.services .icon-box .icon {
+  margin-bottom: 10px;
+}
+.services .icon-box .icon i {
+  color: #47b2e4;
+  font-size: 36px;
+  transition: 0.3s;
+}
+.services .icon-box h4 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+.services .icon-box h4 a {
+  color: #37517e;
+  transition: ease-in-out 0.3s;
+}
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.services .icon-box:hover {
+  transform: translateY(-10px);
+}
+.services .icon-box:hover h4 a {
+  color: #47b2e4;
+}
+
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+.cta {
+  background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)),  fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+}
+.cta h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+.cta p {
+  color: #fff;
+}
+.cta .cta-btn {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.cta .cta-btn:hover {
+  background: #47b2e4;
+  border: 2px solid #47b2e4;
+}
+@media (max-width: 1024px) {
+  .cta {
+    background-attachment: scroll;
+  }
+}
+@media (min-width: 769px) {
+  .cta .cta-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio #portfolio-flters {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px 5px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: #444444;
+  transition: all 0.3s;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+}
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  background: #47b2e4;
+  color: #fff;
+}
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+.portfolio .portfolio-item .portfolio-img {
+  overflow: hidden;
+}
+.portfolio .portfolio-item .portfolio-img img {
+  transition: all 0.6s;
+}
+.portfolio .portfolio-item .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  z-index: 3;
+  right: 15px;
+  transition: all 0.3s;
+  background: rgba(55, 81, 126, 0.8);
+  padding: 10px 15px;
+}
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0px;
+}
+.portfolio .portfolio-item .portfolio-info p {
+  color: #f9fcfe;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.portfolio .portfolio-item .portfolio-info .preview-link, .portfolio .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #fff;
+  transition: 0.3s;
+}
+.portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #47b2e4;
+}
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 10px;
+}
+.portfolio .portfolio-item:hover .portfolio-img img {
+  transform: scale(1.15);
+}
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+}
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #47b2e4;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #47b2e4;
+}
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(55, 81, 126, 0.08);
+}
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team .member {
+  position: relative;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  background: rgb(42, 48, 56);
+  transition: 0.5s;
+}
+.team .member .pic {
+  overflow: hidden;
+  width: 100px;
+  border-radius: 50%;
+}
+.team .member .pic img {
+  transition: ease-in-out 0.3s;
+}
+.team .member:hover {
+  transform: translateY(-10px);
+}
+.team .member .member-info {
+  padding-left: 30px;
+}
+.team .member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #ffffff;
+}
+.team .member span {
+  display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+}
+.team .member span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #ffffff;
+  bottom: 0;
+  left: 0;
+}
+.team .member p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+.team .member .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.team .member .social a {
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+}
+.team .member .social a i {
+  color: #37517e;
+  font-size: 16px;
+  margin: 0 2px;
+}
+.team .member .social a:hover {
+  background: #47b2e4;
+}
+.team .member .social a:hover i {
+  color: #fff;
+}
+.team .member .social a + a {
+  margin-left: 8px;
+}
+
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
+.pricing .row {
+  padding-top: 40px;
+}
+.pricing .box {
+  padding: 60px 40px;
+  box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1);
+  background: #fff;
+  height: 100%;
+  border-top: 4px solid #fff;
+  border-radius: 5px;
+}
+.pricing h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #37517e;
+}
+.pricing h4 {
+  font-size: 48px;
+  color: #37517e;
+  font-weight: 400;
+  font-family: "Jost", sans-serif;
+  margin-bottom: 25px;
+}
+.pricing h4 sup {
+  font-size: 28px;
+}
+.pricing h4 span {
+  color: #47b2e4;
+  font-size: 18px;
+  display: block;
+}
+.pricing ul {
+  padding: 20px 0;
+  list-style: none;
+  color: #999;
+  text-align: left;
+  line-height: 20px;
+}
+.pricing ul li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+}
+.pricing ul i {
+  color: #28a745;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.pricing ul .na {
+  color: #ccc;
+}
+.pricing ul .na i {
+  color: #ccc;
+}
+.pricing ul .na span {
+  text-decoration: line-through;
+}
+.pricing .buy-btn {
+  display: inline-block;
+  padding: 12px 35px;
+  border-radius: 50px;
+  color: #47b2e4;
+  transition: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+  transition: 0.3s;
+  border: 1px solid #47b2e4;
+}
+.pricing .buy-btn:hover {
+  background: #47b2e4;
+  color: #fff;
+}
+.pricing .featured {
+  border-top-color: #47b2e4;
+}
+.pricing .featured .buy-btn {
+  background: #47b2e4;
+  color: #fff;
+}
+.pricing .featured .buy-btn:hover {
+  background: #23a3df;
+}
+@media (max-width: 992px) {
+  .pricing .box {
+    max-width: 60%;
+    margin: 0 auto 30px auto;
+  }
+}
+@media (max-width: 767px) {
+  .pricing .box {
+    max-width: 80%;
+    margin: 0 auto 30px auto;
+  }
+}
+@media (max-width: 420px) {
+  .pricing .box {
+    max-width: 100%;
+    margin: 0 auto 30px auto;
+  }
+}
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.faq .faq-list {
+  padding: 0 100px;
+}
+.faq .faq-list ul {
+  padding: 0;
+  list-style: none;
+}
+.faq .faq-list li + li {
+  margin-top: 15px;
+}
+.faq .faq-list li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+.faq .faq-list a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 30px;
+  outline: none;
+  cursor: pointer;
+}
+.faq .faq-list .icon-help {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  left: 20px;
+  color: #47b2e4;
+}
+.faq .faq-list .icon-show, .faq .faq-list .icon-close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+.faq .faq-list .icon-show {
+  display: none;
+}
+.faq .faq-list a.collapsed {
+  color: #37517e;
+  transition: 0.3s;
+}
+.faq .faq-list a.collapsed:hover {
+  color: #47b2e4;
+}
+.faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+}
+.faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .faq .faq-list {
+    padding: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info {
+  border-top: 3px solid #47b2e4;
+  border-bottom: 3px solid #47b2e4;
+  padding: 30px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+.contact .info i {
+  font-size: 20px;
+  color: #47b2e4;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #e7f5fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #37517e;
+}
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #6182ba;
+}
+.contact .info .email p {
+  padding-top: 5px;
+}
+.contact .info .social-links {
+  padding-left: 60px;
+}
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+.contact .info .social-links a:hover {
+  background: #47b2e4;
+  color: #fff;
+}
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+  background: #47b2e4;
+  color: #fff;
+}
+.contact .php-email-form {
+  width: 100%;
+  border-top: 3px solid #47b2e4;
+  border-bottom: 3px solid #47b2e4;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+.contact .php-email-form .form-group {
+  margin-bottom: 20px;
+}
+.contact .php-email-form label {
+  padding-bottom: 8px;
+}
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+  border-color: #47b2e4;
+}
+.contact .php-email-form input {
+  height: 44px;
+}
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+.contact .php-email-form button[type=submit] {
+  background: #47b2e4;
+  border: 0;
+  padding: 12px 34px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.contact .php-email-form button[type=submit]:hover {
+  background: #209dd8;
+}
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 15px 0;
+  background: #f3f5fa;
+  min-height: 40px;
+  margin-top: 72px;
+}
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 68px;
+  }
+}
+.breadcrumbs h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #37517e;
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 14px;
+}
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #4668a2;
+  content: "/";
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  font-size: 14px;
+  background: #171d28;
+}
+#footer .footer-newsletter {
+  padding: 50px 0;
+  background: #f3f5fa;
+  text-align: center;
+  font-size: 15px;
+  color: #444444;
+}
+#footer .footer-newsletter h4 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  color: #37517e;
+}
+#footer .footer-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+#footer .footer-newsletter form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+#footer .footer-newsletter form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #47b2e4;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+#footer .footer-newsletter form input[type=submit]:hover {
+  background: #209dd8;
+}
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  background: #fff;
+}
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-contact h3 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #37517e;
+}
+#footer .footer-top .footer-contact p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Jost", sans-serif;
+  color: #5e5e5e;
+}
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #37517e;
+  position: relative;
+  padding-bottom: 12px;
+}
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #47b2e4;
+  font-size: 18px;
+  line-height: 1;
+}
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+#footer .footer-top .footer-links ul a {
+  color: #777777;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: none;
+  color: #47b2e4;
+}
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #47b2e4;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#footer .footer-top .social-links a:hover {
+  background: #209dd8;
+  color: #fff;
+  text-decoration: none;
+}
+#footer .footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+}
+#footer .copyright {
+  float: left;
+}
+#footer .credits {
+  float: right;
+  font-size: 13px;
+}
+#footer .credits a {
+  transition: 0.3s;
+}
+@media (max-width: 768px) {
+  #footer .footer-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #footer .copyright, #footer .credits {
+    text-align: center;
+    float: none;
+  }
+  #footer .credits {
+    padding-top: 4px;
+  }
+}
+</style>
