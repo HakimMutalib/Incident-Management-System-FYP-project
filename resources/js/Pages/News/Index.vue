@@ -29,10 +29,8 @@
                                           <p v-html="article.description"></p>
                                         </div>
                                         <div class="card-footer">
-                                          <p>By :</p>
-                                            <p class="font-italic" v-html="article.author"></p>
-                                            <p>Published at: </p>
-                                            <p v-html="article.publishedAt"></p>
+                                            <p>By : {{article.author}}</p>
+                                            <p>Published at: {{format_date(article.publishedAt)}}</p>
                                         </div>
                                   </div>
                               </div>
@@ -46,6 +44,7 @@
 
 <script>
 import AdminLayout from '@/Layouts/AdminLayout'
+import moment from 'moment'
 
 export default {
    components: {
@@ -94,6 +93,13 @@ export default {
         this.currentPage = 1;
         this.articles = [];
       },
+
+      format_date(value){
+                if (value) {
+                return moment(String(value)).format('DD/MM/YYYY')
+                }
+            },
+
       fetchSearchNews() {
         if(this.searchword !== '')
         {

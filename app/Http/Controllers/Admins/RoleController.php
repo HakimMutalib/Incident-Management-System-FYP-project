@@ -11,7 +11,7 @@ use App\Models\Permission;
 class RoleController extends Controller
 {
     public function __construct() {
-        $this->middleware(['role:super-admin|admin|moderator']);
+        $this->middleware(['role:super-admin|admin|technician']);
     }
 
     /**
@@ -20,13 +20,13 @@ class RoleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         return inertia::render('Admins/Roles/Index',[
         'roles' => Role::with('permissions')->paginate(5),
-        'permissions' => Permission::all(), 
+        'permissions' => Permission::all(),
         ]);
     }
-    
+
 
     /**
      * Show the form for creating a new resource.

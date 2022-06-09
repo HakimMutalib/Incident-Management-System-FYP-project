@@ -1,7 +1,7 @@
 <template>
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <inertia-link href="route('admin.dashboard.index')" class="brand-link">
+    <inertia-link :href="route('admin.dashboard.index')" class="brand-link">
       <img src="/assets/img/IMS%20Logo.png" alt="gear Logo" class="brand-image img-circle elevation-3" >
       <span class="brand-text font-weight-light">IMS</span>
     </inertia-link>
@@ -14,7 +14,7 @@
           <img src="/assets/img/User_1.jpg" class="img-circle elevation-2" alt="User">
         </div>
         <div class="info">
-          <a :href="route('profile.show')" class="d-block">{{$page.props.user.email}}</a>
+          <a :href="route('profile.show')" class="d-block">{{$page.props.user.name}}</a>
         </div>
       </div>
 
@@ -81,17 +81,16 @@
             </ul>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.technician || $page.props.auth.hasRole.developer">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
-              <p>
+              <p >
                Administration
-                <i class="fas fa-angle-left right"></i>
-
+              <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.moderator || $page.props.auth.hasRole.developer">
+              <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.technician || $page.props.auth.hasRole.developer">
                 <inertia-link :href="route('admin.admins.index')" class="nav-link"
                 :class="route().current('admin.admins.*' ? 'active' : '')" >
                    <i class="far fa-circle nav-icon "></i>
@@ -100,7 +99,7 @@
                    </p>
                 </inertia-link>
               </li>
-               <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.moderator">
+               <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.technician">
                 <inertia-link :href="route('admin.users.index')" class="nav-link" :class="route().current('admin.users.*') ? 'active' : ''">
                    <i class="far fa-circle nav-icon "></i>
                    <p>
@@ -108,7 +107,7 @@
                    </p>
                 </inertia-link>
               </li>
-               <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.moderator">
+               <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.technician">
                 <inertia-link :href="route('admin.roles.index')" class="nav-link" :class="route().current('admin.roles.*') ? 'active' : ''">
                    <i class="far fa-circle nav-icon "></i>
                    <p>
@@ -116,7 +115,7 @@
                    </p>
                 </inertia-link>
               </li>
-               <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.moderator">
+               <li class="nav-item" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.technician">
                 <inertia-link :href="route('admin.permissions.index')" class="nav-link" :class="route().current('admin.permissions.*') ? 'active' : ''">
                    <i class="far fa-circle nav-icon "></i>
                    <p>

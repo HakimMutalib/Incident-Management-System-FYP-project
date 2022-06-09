@@ -117,7 +117,7 @@ class BarChart
             ->setColors(['#ffc63b', '#ff6384', '#3339FF'])
             ->setFontColor('#ffffff')
             ->setMarkers(['#FF5722', '#E040FB'], 7, 10)
-            ->setXAxis(['January 2021', 'February 2022', 'March 2022','April 2022','May 2022','June 2022'])
+            ->setXAxis(['January 2022', 'February 2022', 'March 2022','April 2022','May 2022','June 2022'])
             ->setToolbar('true')
             ->toVue();
     }

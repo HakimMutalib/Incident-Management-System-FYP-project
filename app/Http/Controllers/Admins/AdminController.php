@@ -12,7 +12,7 @@ class AdminController extends Controller
 {
 
     public function __construct() {
-        $this->middleware(['role:super-admin|admin|moderator|developer']);
+        $this->middleware(['role:super-admin|admin|technician|developer']);
     }
 
     /**

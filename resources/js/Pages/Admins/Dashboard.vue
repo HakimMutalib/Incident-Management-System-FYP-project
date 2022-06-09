@@ -26,13 +26,13 @@
                                     <div class="card-body">
                                         <div v-if="unreadnotifications.length > 0">
                                             <div v-for="(unread, index) in unreadnotifications" :key="index">
-                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\AdminTicketUpdate'">{{unread.data.name}} ({{unread.data.email}})  ticket ID of {{unread.data.id}} has been updated on {{unread.updated_at}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
+                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\AdminTicketUpdate'">{{unread.data.name}} ({{unread.data.email}})  ticket ID of {{unread.data.id}} has been updated on {{format_date(unread.updated_at)}}.  <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
                                             </div>
                                         </div>
 
                                         <div v-if="unreadnotifications.length > 0">
                                             <div v-for="(unread, index) in unreadnotifications" :key="index">
-                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\AdminTicketMake'">{{unread.data.name}} ({{unread.data.email}})  ticket ID of {{unread.data.id}} has been updated on {{unread.updated_at}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
+                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\AdminTicketMake'">{{unread.data.name}} ({{unread.data.email}})  ticket ID of {{unread.data.id}} has been created on {{format_date(unread.created_at)}}. Priority: {{unread.data.priority}} <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
                                             </div>
                                         </div>
                                     <a  v-show="unreadnotifications.length > 0" @click="markAsRead">Mark all as read!</a>
@@ -49,13 +49,13 @@
                                     <div class="card-body">
                                         <div v-if="unreadnotifications.length > 0">
                                             <div v-for="(unread, index) in unreadnotifications" :key="index">
-                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\TicketNotification'">Hi {{unread.data.name}} ({{unread.data.email}}), your ticket has been created on {{unread.created_at}} with a ticket ID of {{unread.data.id}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
+                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\TicketNotification'">Hi {{unread.data.name}} ({{unread.data.email}}), your ticket has been created on {{format_date(unread.created_at)}} with a ticket ID of {{unread.data.id}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
                                             </div>
                                         </div>
 
                                         <div v-if="unreadnotifications.length > 0">
                                             <div v-for="(unread, index) in unreadnotifications" :key="index">
-                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\UpdateTicket'">Hi {{unread.data.name}} ({{unread.data.email}}) ticket has been updated on {{unread.updated_at}} with a ticket ID of {{unread.data.id}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
+                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\UpdateTicket'">Hi {{unread.data.name}} ({{unread.data.email}}) ticket has been updated on {{format_date(unread.updated_at)}} with a ticket ID of {{unread.data.id}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
                                             </div>
                                         </div>
                                     <a  v-show="unreadnotifications.length > 0" @click="markAsRead">Mark all as read!</a>
@@ -142,8 +142,9 @@
 </template>
 
 <script>
-    import AdminLayout from '@/Layouts/AdminLayout'
+    import AdminLayout from '@/Layouts/AdminLayout';
     import VueApexCharts from "vue3-apexcharts";
+    import moment from 'moment';
       export default {
         data(){
             return {
@@ -159,6 +160,21 @@
         },
 
         methods: {
+            dateFormat(v) {
+                return (v) => {
+                    let format = (d) =>
+                    d.toString().replace(/\w+ (\w+) (\d+) (\d+).*/, "$2 $1, $3");
+                    return format(new Date(v));
+                };
+            },
+
+            format_date(value){
+                if (value) {
+                return moment(String(value)).format('DD/MM/YYYY ,  h:mm:ss a')
+                }
+            },
+
+
             getNotifications(){
                 axios.get('dashboard/unreadNotifications')
                 .then((response) => {

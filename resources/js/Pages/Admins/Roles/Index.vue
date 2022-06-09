@@ -22,7 +22,7 @@
                                         <th class="text-capitalize">Role Name</th>
                                         <th class="text-capitalize">Permission</th>
                                         <th class="text-capitalize">Created</th>
-                                        <th class="text-capitalize text-right"  v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.moderator">Action</th>
+                                        <th class="text-capitalize text-right"  v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin ">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,14 +36,14 @@
                                             </div>
                                         </td>
                                         <td>{{ role.created_at }}</td>
-                                        <td class="text-right"  v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.moderator">
+                                        <td class="text-right"  v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin ">
                                             <button class="btn btn-success text-uppercase" style="letter-spacing 0.1em;" @click="editModal(role)">Edit</button>
                                             <button class="btn btn-danger text-uppercase" style="letter-spacing 0.1em;" @click="deleteRole(role)">Delete</button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            </div>                          
+                            </div>
                             <div class=".card-footer clearfix">
                                 <pagination :links="roles.links"></pagination>
                             </div>
@@ -106,7 +106,7 @@
         </div>
         </admin-layout>
     </div>
-   
+
 </template>
 
 <script>
@@ -114,12 +114,12 @@ import AdminLayout from '@/Layouts/AdminLayout'
 import Pagination from '@/Components/Pagination'
 export default {
     props: ['roles','permissions'],
-    components: { 
+    components: {
         AdminLayout,
         Pagination,
         },
-  
-  data() {  
+
+  data() {
       return {
           editedIndex: -1,
           editMode: false,
@@ -136,7 +136,7 @@ export default {
           return this.editedIndex === -1 ? 'create new role!' : 'Edit current role';
       },
       buttonTxt(){
-          return this.editedIndex === -1 ? 'Create' : 'Edit' ;         
+          return this.editedIndex === -1 ? 'Create' : 'Edit' ;
       },
       checkMode(){
           return this.editMode === false ? this.createRole : this.editRole;
@@ -161,12 +161,12 @@ export default {
       openModal(){
           this.editedIndex = -1
           $('#modal-lg').modal('show')
-      }, 
+      },
       closeModal(){
           this.form.clearErrors()
           $('#modal-lg').modal('hide')
       },
-      createRole(){       
+      createRole(){
         this.form.post(this.route('admin.roles.store'),{
             preserveScroll: true,
             onSuccess:()=> {
@@ -178,7 +178,7 @@ export default {
             }
         })
        },
-       editRole(){ 
+       editRole(){
             this.form.patch(this.route('admin.roles.update' , this.form.id, this.form),{
             preserveScroll: true,
             onSuccess:()=> {
@@ -190,8 +190,8 @@ export default {
                 }
             })
         },
-         
-       deleteRole(role){ 
+
+       deleteRole(role){
            Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",

@@ -28,7 +28,7 @@
                                                  <th class="text-capitalize">Creator Email</th>
                                                 <th class="text-capitalize">Created At</th>
                                                 <th class="text-capitalize">Status</th>
-                                                <th class="text-capitalize text-right" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin">Actions</th>
+                                                <th class="text-capitalize text-right" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin|| $page.props.auth.hasRole.technician">Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -42,7 +42,7 @@
                                                 <td>{{ ticket.email }}</td>
                                                 <td>{{ ticket.created_at }}</td>
                                                 <td>{{ ticket.status }}</td>
-                                                <td class="text-right" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin">
+                                                <td class="text-right" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.technician">
                                                     <button class="btn btn-success text-uppercase" style="letter-spacing: 0.1em;" @click="editModal(ticket)">Edit</button>
                                                     <button class="btn btn-danger text-uppercase ml-1" style="letter-spacing: 0.1em;" @click="deleteTicket(ticket)">Delete</button>
                                                 </td>

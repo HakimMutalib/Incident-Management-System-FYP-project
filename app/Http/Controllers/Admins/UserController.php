@@ -12,7 +12,7 @@ use Inertia\Inertia;
 class UserController extends Controller
 {
     public function __construct() {
-        $this->middleware(['role:super-admin|admin|moderator']);
+        $this->middleware(['role:super-admin|admin|moderator|technician']);
     }
 
     /**

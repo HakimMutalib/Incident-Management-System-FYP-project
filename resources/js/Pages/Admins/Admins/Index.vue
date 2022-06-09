@@ -17,21 +17,20 @@
                                         <th class="text-capitalize">Role</th>
                                         <th class="text-capitalize">E-mail</th>
                                         <th class="text-capitalize">Joined</th>
-                                        <th class="text-capitalize text-right"  v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.moderator">Action</th>
+                                        <th class="text-capitalize text-right"  v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin ">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr v-for="(admin, index) in admins" :key="index">
                                         <td class="text-capitalize">{{ admin.name }}</td>
                                         <td>
-                                            <template v-for="role in admin.roles"
-                                            :key="role.id">
+                                            <template v-for="role in admin.roles" :key="role.id">
                                             {{role.name}}
                                             </template>
                                         </td>
                                         <td>{{ admin.email }}</td>
                                         <td>{{ admin.created_at }}</td>
-                                        <td class="text-right" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin || $page.props.auth.hasRole.moderator">
+                                        <td class="text-right" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin ">
                                             <button class="btn btn-success text-uppercase" style="letter-spacing 0.1em;" @click="editModal(admin)">Edit</button>
                                         </td>
                                     </tr>
@@ -59,7 +58,7 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="name" class="h4">Name</label>
-                                        <input type="text" class="form-control text-capitalize"  placeholder="Name" v-model="form.name">
+                                        <input type="text" class="form-control text-capitalize"  placeholder="Name" v-model="form.name" disabled>
                                     </div>
                                     <div class="form-group">
                                         <label for="roles" class="h4">Roles</label>
