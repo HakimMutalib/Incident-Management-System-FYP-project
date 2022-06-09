@@ -52,7 +52,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum','verified'])-
     Route::get('dashboard/markAsRead',[AdminDashboardController::class, 'markAsRead']);
     Route::get('dashboard/unreadNotifications',[AdminDashboardController::class, 'unreadNotifications']);
     Route::get('dashboard/updateNotification',[AdminDashboardController::class, 'updateNotification']);
-    
+    Route::get('dashboard/MaR',[AdminDashboardController::class, 'MaR']);
+
     Route::resource('admins',AdminController::class)->parameters(['admins'=>'user'])->only(['index','update']);
 
     Route::resource('users',UserController::class)->except(['create','show','edit']);
@@ -71,7 +72,7 @@ Route::prefix('news')->name('news.')->middleware(['auth:sanctum','verified'])->g
 Route::prefix('virus')->name('virus.')->middleware(['auth:sanctum','verified'])->group(function
 (){
     Route::get('virus',[VirusController::class, 'index'])->name('virus.virus');
-    
+
 });
 
 Route::prefix('File')->name('File.')->middleware(['auth:sanctum','verified'])->group(function

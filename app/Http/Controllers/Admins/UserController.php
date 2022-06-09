@@ -22,7 +22,7 @@ class UserController extends Controller
      */
     public function index() {
         return Inertia::render('Admins/Users/Index', [
-            'users' => User::where('is_admin', 0)->latest()->paginate(5),
+            'users' => User::where('is_admin', 0)->latest()->paginate(15),
             'roles' => Role::all()
         ]);
     }

@@ -37,6 +37,7 @@
         "chart.js": "^3.7.1",
         "jqeury": "^0.0.1-security",
         "vue-chartjs": "^4.0.7",
-        "vue3-apexcharts": "^1.4.1"
+        "vue3-apexcharts": "^1.4.1",
+        "vuejs-smart-table": "^1.0.0-beta.6"
     }
 }

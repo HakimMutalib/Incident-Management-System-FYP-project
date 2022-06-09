@@ -53,7 +53,7 @@ class TicketNotification extends Notification
         $creatoremail = Ticket::where('email', '!=', null)->orderBy('created_at','DESC')->first();
         $created = Ticket::where('created_at', '!=', null)->orderBy('created_at','DESC')->first();
         $status =  Ticket::where('status', '!=', null)->orderBy('created_at','DESC')->first();
-
+        $id =  Ticket::where('id', '!=', null)->orderBy('created_at','DESC')->first();
 
         return (new MailMessage)
 
@@ -63,6 +63,8 @@ class TicketNotification extends Notification
                     ->line('Please click on the Ticket Page button for further details')
                     ->line('---------------------------------------------------------------------------')
                     ->line('Name: '.$creator->name)
+                    ->line('---------------------------------------------------------------------------')
+                    ->line('Id: '.$id->id)
                     ->line('---------------------------------------------------------------------------')
                     ->line('Email: '.$creatoremail->email)
                     ->line('---------------------------------------------------------------------------')
@@ -96,6 +98,9 @@ class TicketNotification extends Notification
             'priority'=> $this->ticket->priority,
 
             'created_at'=> $this->ticket->created_at,
+
+            'id'=> $this->ticket->id
+
 
         ];
 

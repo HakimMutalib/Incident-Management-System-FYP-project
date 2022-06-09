@@ -90,19 +90,19 @@ class BarChart
     {
 
 
-        $results = Ticket::whereMonth('created_at','=', '05')->count();
-        $results2 = Ticket::whereMonth('created_at','=', '04' )->count();
-        $results3 = Ticket::whereMonth('created_at', '=', '03')->count();
-        $results4 = Ticket::whereMonth('created_at','=', '02' )->count();
-        $results5 = Ticket::whereMonth('created_at','=', '01' )->count();
-        $results6 = Ticket::whereMonth('created_at', '=','12' )->count();
+        $results = Ticket::whereMonth('created_at','=', '06')->count();
+        $results2 = Ticket::whereMonth('created_at','=', '05' )->count();
+        $results3 = Ticket::whereMonth('created_at', '=', '04')->count();
+        $results4 = Ticket::whereMonth('created_at','=', '03' )->count();
+        $results5 = Ticket::whereMonth('created_at','=', '02' )->count();
+        $results6 = Ticket::whereMonth('created_at', '=','01' )->count();
 
-        $Closedresults = Ticket::where('status', '=', 'Closed')->whereMonth('created_at','=', '05')->count();
-        $Closedresults2 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at','=', '04' )->count();
-        $Closedresults3 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at', '=', '03')->count();
-        $Closedresults4 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at','=', '02' )->count();
-        $Closedresults5 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at','=', '01' )->count();
-        $Closedresults6 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at', '=','12' )->count();
+        $Closedresults = Ticket::where('status', '=', 'Closed')->whereMonth('created_at','=', '06')->count();
+        $Closedresults2 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at','=', '05' )->count();
+        $Closedresults3 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at', '=', '04')->count();
+        $Closedresults4 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at','=', '03' )->count();
+        $Closedresults5 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at','=', '02' )->count();
+        $Closedresults6 = Ticket::where('status', '=', 'Closed')->whereMonth('created_at', '=','01' )->count();
 
 
 
@@ -117,7 +117,7 @@ class BarChart
             ->setColors(['#ffc63b', '#ff6384', '#3339FF'])
             ->setFontColor('#ffffff')
             ->setMarkers(['#FF5722', '#E040FB'], 7, 10)
-            ->setXAxis(['December 2021', 'January 2022', 'February 2022','March 2022','April 2022','May 2022'])
+            ->setXAxis(['January 2021', 'February 2022', 'March 2022','April 2022','May 2022','June 2022'])
             ->setToolbar('true')
             ->toVue();
     }
@@ -144,35 +144,31 @@ class AdminDashboardController extends Controller
             'chart2' => $chart2->build(),
             'chart3' => $chart3->build()
             ]);
-
-
-
-
-
-
-
     }
 
     public function unreadNotifications()
     {
         $unreadNotifications = Auth::user()->unreadNotifications;
         return response()->json($unreadNotifications);
-
     }
 
     public function markAsRead()
     {
         Auth::user()->notifications->markAsRead();
         return response()->json('success');
+    }
 
-    } 
+    public function MaR()
+    {
+        $id = auth()->user()->unreadNotifications[0]->id;
+        auth()->user()->unreadNotifications->where('id', $id)->markAsRead();
+    }
 
     public function updateNotification()
     {
         $user = App\Models\User::find(1);
         $unreadNotifications = $user->unreadNotifications;
         return response()->json($unreadNotifications);
-
     }
 
     /**

@@ -40,7 +40,7 @@ class HandleInertiaRequests extends Middleware
                 $user = auth()->user();
                 return $user ? [
                     'hasRole' => [
-                        'superAdmin' => $user->hasRole(['super-admin']),
+                        'technician' => $user->hasRole(['technician']),
                         'admin' => $user->hasRole('admin'),
                         'moderator' => $user->hasRole('moderator'),
                         'developer' => $user->hasRole('developer'),

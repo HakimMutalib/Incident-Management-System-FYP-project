@@ -42,7 +42,7 @@ class AdminTicketUpdate extends Notification
      */
     public function toMail($notifiable)
     {
-        
+
         $description = Ticket::where('description', '!=', null)->orderBy('updated_at','DESC')->first();
         $assignee = Ticket::where('assignee', '!=', null)->orderBy('updated_at','DESC')->first();
         $priority = Ticket::where('priority', '!=', null)->orderBy('updated_at','DESC')->first();
@@ -52,13 +52,16 @@ class AdminTicketUpdate extends Notification
         $created = Ticket::where('created_at', '!=', null)->orderBy('updated_at','DESC')->first();
         $update = Ticket::where('updated_at', '!=', null)->orderBy('updated_at','DESC')->first();
         $status =  Ticket::where('status', '!=', null)->orderBy('updated_at','DESC')->first();
+        $id =  Ticket::where('id', '!=', null)->orderBy('updated_at','DESC')->first();
 
         return (new MailMessage)
-                
+
                 ->line('Your ticket has been updated. Below is the details of your ticket.')
                 ->line('Please click on the Ticket Page button for further details')
                 ->line('---------------------------------------------------------------------------')
                 ->line('Name: '.$creator->name)
+                ->line('---------------------------------------------------------------------------')
+                ->line('Id: '.$id->id)
                 ->line('---------------------------------------------------------------------------')
                 ->line('Email: '.$creatoremail->email)
                 ->line('---------------------------------------------------------------------------')
@@ -96,6 +99,8 @@ class AdminTicketUpdate extends Notification
             'assignee'=> $this->ticket->assignee,
 
             'status'=> $this->ticket->status,
+
+            'id'=> $this->ticket->id
         ];
     }
 }

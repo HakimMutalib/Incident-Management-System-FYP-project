@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="text-center">
                             <br><br>
-                                 
+
                             <table class="table table-bordered table-dark">
                             <thead>
                                 <tr>
@@ -52,7 +52,7 @@
                                 <th scope="row">Avira</th>
                                 <td>
                                   <div v-if="results2 === false">Clean File</div>
-                                  <div v-else-if="results2 === true">Dangerous File</div>  
+                                  <div v-else-if="results2 === true">Dangerous File</div>
                                 </td>
                                 </tr>
 
@@ -100,7 +100,7 @@ const options = {
   method: 'POST',
   headers: {Accept: 'text/plain', 'Content-Type': 'application/x-www-form-urlencoded'},
    body: new URLSearchParams({
-    apikey: '108b339f8e77fa963840ec618c8699ed1d67733076001534166dd5739522c1d3',
+    apikey: '44c81fef71511d9637e29314bb6c61e758710069b703e0cff3a432e01fb108cc',
     file: 'this.image'
    })
 };
@@ -114,7 +114,7 @@ export default {
   data() {
     return {
       image: '',
-      apiKey: '108b339f8e77fa963840ec618c8699ed1d67733076001534166dd5739522c1d3',
+      apiKey: '44c81fef71511d9637e29314bb6c61e758710069b703e0cff3a432e01fb108cc',
        results1:'',
        results2:'',
        results3:'',
@@ -171,9 +171,9 @@ export default {
   },
 
   computed:{
-    
-    newValue(){ 
-       
+
+    newValue(){
+
   }
  }
 }

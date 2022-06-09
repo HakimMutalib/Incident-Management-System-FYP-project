@@ -33,7 +33,7 @@ class UpdateTicket extends Notification
      */
     public function via($notifiable)
     {
-        
+
         return ['mail','database'];
     }
 
@@ -54,7 +54,7 @@ class UpdateTicket extends Notification
         $created = Ticket::where('created_at', '!=', null)->orderBy('updated_at','DESC')->first();
         $update = Ticket::where('updated_at', '!=', null)->orderBy('updated_at','DESC')->first();
         $status =  Ticket::where('status', '!=', null)->orderBy('updated_at','DESC')->first();
-
+        $id =  Ticket::where('id', '!=', null)->orderBy('updated_at','DESC')->first();
 
         return (new MailMessage)
 
@@ -63,6 +63,8 @@ class UpdateTicket extends Notification
             ->line('Please click on the Ticket Page button for further details')
             ->line('---------------------------------------------------------------------------')
             ->line('Name: '.$creator->name)
+            ->line('---------------------------------------------------------------------------')
+            ->line('Name: '.$id->id)
             ->line('---------------------------------------------------------------------------')
             ->line('Email: '.$creatoremail->email)
             ->line('---------------------------------------------------------------------------')
@@ -100,7 +102,8 @@ class UpdateTicket extends Notification
 
             'status'=> $this->ticket->status,
 
-            'type'=> $this->notifications->type,
+            'id'=> $this->ticket->id
+
         ];
     }
 }

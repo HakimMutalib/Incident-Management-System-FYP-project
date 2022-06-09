@@ -37,12 +37,11 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#services">Features</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Dashboard</a></li>
-          <li><a class="getstarted scrollto" href="#about">Login</a></li>
-          <li><a class="getstarted scrollto" href="#about">Register</a></li>
+          <li><a  class="getstarted scrollto" :href="route('admin.dashboard.index')">Dashboard</a></li>
+          <li><a class="getstarted scrollto"  :href="route('login')">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -115,9 +114,9 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
             <div class="content">
-              <h3 class="text-white">Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3>
+              <h3 class="text-white">Project <strong>Introduction</strong></h3>
               <p class="text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                  Brief information about the project
               </p>
             </div>
 
@@ -127,7 +126,7 @@
                   <a data-bs-toggle="collapse" class="collapse text-white" data-bs-target="#accordion-list-1" ><span>01</span>Who will benefit from this project?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list" >
                     <p class="text-white">
-                     This web application project will primarily allow small and medium-sized enterprises (SMEs) to better run their businesses. Using the Incidents Management System that we design, any issues that occur in their enterprise may be logged and resolved.
+                     This web application project will primarily help small and medium-sized organisations (SMEs) manage their businesses more efficiently.
                     </p>
                   </div>
                 </li>
@@ -136,7 +135,7 @@
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed text-white"><span>02</span> What can this project do to businesses <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p class="text-white">
-                       We also feel that this effort will aid us in our field of study. We think that our initiative will have a good influence on society by assisting all SMEs in competing with larger companies in the market.
+                       Any incidents that arise in the organisation can be logged and managed using the Incidents Management System that we create. Through this project, all the SMEs that need help with analysing incidents that occur in their company can use the project that we develop to manage their company to become more organised.
                     </p>
                   </div>
                 </li>
@@ -145,7 +144,7 @@
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed text-white"><span>03</span> What can you expect from this project? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                     <p class="text-white">
-                      we expect that by implementing our initiative, we will be able to raise cybersecurity knowledge among staff, allowing us to tackle similar problems more effectively in the future.
+                      Small-medium enterprises (SMEs) can use the project to improve their security IT management in their company.
                     </p>
                   </div>
                 </li>
@@ -247,14 +246,16 @@
 
         <div class="section-title">
           <h2>User Interface</h2>
-          <p class="text-white">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p class="text-white"></p>
         </div>
 
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <li data-filter="*" class="filter-active text-white" >All</li>
-          <li data-filter=".filter-app" class="text-white">App</li>
-          <li data-filter=".filter-card" class="text-white">Card</li>
-          <li data-filter=".filter-web" class="text-white">Web</li>
+          <li data-filter=".filter-app" class="text-white">Dashboard</li>
+          <li data-filter=".filter-card" class="text-white">Administration</li>
+          <li data-filter=".filter-web" class="text-white">Virus</li>
+          <li data-filter=".filter-admin" class="text-white">Ticket</li>
+           <li data-filter=".filter-news" class="text-white">News</li>
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -266,21 +267,21 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-admin">
             <div class="portfolio-img"><img src="assets/img/portfolio/Ticket.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Ticket Page</h4>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-news">
             <div class="portfolio-img"><img src="assets/img/portfolio/CyberNews.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Cyber News Page</h4>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-img"><img src="assets/img/portfolio/VirusScanner.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>URL Malware Scanner</h4>
@@ -294,7 +295,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-img"><img src="assets/img/portfolio/User.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>User Page</h4>
@@ -315,7 +316,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-img"><img src="assets/img/portfolio/Permission.png" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Permission Page</h4>
@@ -346,10 +347,8 @@
                 <span class="text-white"></span>
                 <p class="text-white">Fourth year BIT student specialized in Information Assurance and Security</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="https://github.com/HakimMutalib"><i class="ri-github-fill"></i></a>
+                  <a href="https://www.linkedin.com/in/hakim-mutalib-0b6a9b195/"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
@@ -364,9 +363,7 @@
                 <span class="text-white"></span>
                 <p class="text-white">Fourth year BIT student specialized in Business Information Analytics and Data Science</p>
                 <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href="https://github.com/amirulaemann"><i class="ri-github-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
@@ -416,14 +413,14 @@
 
     <div class="container footer-bottom clearfix" style="background-color:#171d28 " >
       <div class="copyright">
-        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Hakim Mutalib & Amirul Aiman</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -432,7 +429,7 @@
 </template>
 
 
-<script src="C:\Users\amiru\Documents\GitHub\Incident-Management-System-FYP-project\public\assets\js\main.js"></script>
+<script src="C:\Users\user\Documents\GitHub\Incident-Management-System-FYP-project\public\assets\js\main.js"></script>
 
 <style lang="scss" scoped>
 .body {

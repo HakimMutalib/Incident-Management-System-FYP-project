@@ -36,9 +36,9 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            </div>                          
+                            </div>
                             <div class=".card-footer clearfix">
-                                <pagination :links="permissions.links"></pagination> 
+                                <pagination :links="permissions.links"></pagination>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
         </div>
         </admin-layout>
     </div>
-   
+
 </template>
 
 <script>
@@ -98,12 +98,12 @@ import AdminLayout from '@/Layouts/AdminLayout'
 import Pagination from '@/Components/Pagination'
 export default {
     props: ['permissions'],
-    components: { 
+    components: {
         AdminLayout,
         Pagination,
         },
-  
-  data() {  
+
+  data() {
       return {
           editedIndex: -1,
           editMode: false,
@@ -119,7 +119,7 @@ export default {
           return this.editedIndex === -1 ? 'create new permission!' : 'Edit current permission';
       },
       buttonTxt(){
-          return this.editedIndex === -1 ? 'Create' : 'Edit' ;         
+          return this.editedIndex === -1 ? 'Create' : 'Edit' ;
       },
       checkMode(){
           return this.editMode === false ? this.createPermission : this.editPermission ;
@@ -137,12 +137,13 @@ export default {
       openModal(){
           this.editedIndex = -1
           $('#modal-lg').modal('show')
-      }, 
+      },
       closeModal(){
           this.form.clearErrors()
+          this.form.reset()
           $('#modal-lg').modal('hide')
       },
-      createPermission(){       
+      createPermission(){
         this.form.post(this.route('admin.permissions.store'),{
             preserveScroll: true,
             onSuccess:()=> {
@@ -154,7 +155,7 @@ export default {
             }
         })
        },
-       editPermission(){ 
+       editPermission(){
             this.form.patch(this.route('admin.permissions.update' , this.form.id, this.form),{
             preserveScroll: true,
             onSuccess:()=> {
@@ -166,7 +167,7 @@ export default {
                 }
             })
         },
-         
+
         deletePermission(permission) {
                 Swal.fire({
                     title: 'Are you sure?',

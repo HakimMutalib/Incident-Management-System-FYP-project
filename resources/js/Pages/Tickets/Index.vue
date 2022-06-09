@@ -3,7 +3,7 @@
         <admin-layout>
             <section class="content">
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="ticket">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
@@ -14,6 +14,7 @@
                                         </button>
                                     </div>
                                 </div>
+
                                 <div class="card-body table-responsive p-0">
                                     <table class="table table-hover text-nowrap table-dark">
                                         <thead>
@@ -27,11 +28,11 @@
                                                  <th class="text-capitalize">Creator Email</th>
                                                 <th class="text-capitalize">Created At</th>
                                                 <th class="text-capitalize">Status</th>
-                                                <th class="text-capitalize text-right">Actions</th>
+                                                <th class="text-capitalize text-right" v-if="$page.props.auth.hasRole.superAdmin || $page.props.auth.hasRole.admin">Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr v-for="(ticket, index) in tickets" :key="index">
+                                            <tr v-for="(ticket, index) in tickets.data" :key="index">
                                                 <td class="text-capitalize">{{ ticket.id }}</td>
                                                 <td>{{ ticket.description }}</td>
                                                 <td>{{ ticket.assignee }}</td>
@@ -50,7 +51,7 @@
                                     </table>
                                 </div>
                                 <div class="card-footer clearfix">
-                                    <!-- <pagination :links="users.links"></pagination> -->
+                                    <pagination :links="tickets.links"></pagination>
                                 </div>
                             </div>
                         </div>
@@ -237,12 +238,14 @@
 
 <script>
 import AdminLayout from '@/Layouts/AdminLayout'
+import Pagination from '@/Components/Pagination'
 export default {
      props: ['tickets','assignee'],
      components: {
             AdminLayout,
-            //Pagination,
+            Pagination,
         },
+
     data() {
             return {
                 value:'not assigned',
@@ -286,7 +289,7 @@ export default {
             editModal(ticket) {
                 this.editMode = true
                 $('#modal-lg').modal('show')
-                this.editedIndex = this.tickets
+                this.editedIndex = this.tickets.data.indexOf(ticket)
                 this.form.name = ticket.name
                 this.form.category = ticket.category
                 this.form.description = ticket.description

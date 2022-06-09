@@ -18,7 +18,7 @@
                 </div>
                 <br>
                 <br>
-                <div class="container"> 
+                <div class="container">
                     <div class="mx-auto" style="width: 100;">
                         <div class="input-group rounded">
                         <input type="search" class="form-control rounded" placeholder="Enter the website here" v-model="searchword" />
@@ -27,7 +27,7 @@
                         </button>
                         </div>
                     </div>
-                </div> 
+                </div>
                         <br>
                         <div class="card-footer">
                 <div class="container">
@@ -97,7 +97,7 @@ export default{
 
 data() {
         return{
-            apiKey: '108b339f8e77fa963840ec618c8699ed1d67733076001534166dd5739522c1d3',
+            apiKey: '44c81fef71511d9637e29314bb6c61e758710069b703e0cff3a432e01fb108cc',
             apiUrl:'',
             searchword:'',
             allinfo : true,

@@ -61,7 +61,7 @@
                                         <label for="name" class="h4">Name</label>
                                         <input type="text" class="form-control text-capitalize"  placeholder="Name" v-model="form.name">
                                     </div>
-                                    <div class="form-group" v-if="editMode">
+                                    <div class="form-group">
                                         <label for="roles" class="h4">Roles</label>
                                         <multiselect
                                             v-model="form.roles"
@@ -94,64 +94,62 @@
 </template>
 
 <script>
-import AdminLayout from '@/Layouts/AdminLayout'
-export default {
-    props: ['roles','admins'],
-    components: {
-        AdminLayout,
+    import AdminLayout from '@/Layouts/AdminLayout'
+    export default {
+        props: ['roles', 'admins'],
+        components: {
+            AdminLayout,
         },
-
-  data() {
-      return {
-          editedIndex: -1,
-          editMode: false,
-          form: this.$inertia.form({
-              id:'',
-              name:'',
-              email:'',
-              roles: []
-          }),
-          roleOptions: this.roles,
-      }
-  },
-  methods: {
-      addTag(newRole) {
-          let tag = {
-              name: newRole,
-          }
-          this.roleOptions.push(tag)
-          this.form.roles.push(tag)
-      },
-      editModal(admin){
-          $('#modal-lg').modal('show')
-          this.editedIndex = this.admins.indexOf(admin)
-          this.form.name = admin.name
-          this.form.email = admin.email
-          this.form.id = admin.id
-          this.form.roles = admin.roles
-      },
-      openModal(){
-          this.editedIndex = -1
-          $('#modal-lg').modal('show')
-      },
-      closeModal(){
-          this.form.clearErrors()
-          $('#modal-lg').modal('hide')
-      },
-       updateAdmins(){
-            this.form.patch(this.route('admin.admins.update' , this.form),{
-            preserveScroll: true,
-            onSuccess:()=> {
-                this.form.reset()
-                this.closeModal()
-                 Toast.fire({
-                    icon: 'success',
-                    title: 'Admin has been succesfully edited!'
-                })
+        data() {
+            return {
+                editedIndex: -1,
+                form: this.$inertia.form({
+                    id: '',
+                    name: '',
+                    email: '',
+                    roles: []
+                }),
+                roleOptions: this.roles,
+            }
+        },
+        methods: {
+            addTag(newRole) {
+                let tag = {
+                    name: newRole,
                 }
-            })
-        },
-
+                this.roleOptions.push(tag)
+                this.form.roles.push(tag)
+            },
+            editModal(admin) {
+                $('#modal-lg').modal('show')
+                this.editedIndex = this.admins.indexOf(admin)
+                this.form.name = admin.name
+                this.form.email = admin.email
+                this.form.id = admin.id
+                this.form.roles = admin.roles
+            },
+            openModal() {
+                this.editedIndex = -1
+                $('#modal-lg').modal('show')
+            },
+            closeModal() {
+                this.form.clearErrors()
+                this.editMode = false
+                this.form.reset()
+                $('#modal-lg').modal('hide')
+            },
+            updateAdmins() {
+                this.form.patch(this.route('admin.admins.update', this.form), {
+                    preserveScroll: true,
+                    onSuccess:() => {
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Admin has been updated!'
+                        })
+                        this.closeModal()
+                    }
+                })
+            },
+        }
     }
-}
 </script>

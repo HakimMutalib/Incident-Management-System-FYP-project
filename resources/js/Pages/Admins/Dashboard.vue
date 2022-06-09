@@ -26,36 +26,13 @@
                                     <div class="card-body">
                                         <div v-if="unreadnotifications.length > 0">
                                             <div v-for="(unread, index) in unreadnotifications" :key="index">
-                                                <p class="alert alert-success" v-if="type === 'App\\Notifications\\AdminTicketUpdate'">{{unread.data.name}} ({{unread.data.email}}) ticket has been updated on {{unread.updated_at}}.</p>
+                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\AdminTicketUpdate'">{{unread.data.name}} ({{unread.data.email}})  ticket ID of {{unread.data.id}} has been updated on {{unread.updated_at}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
                                             </div>
                                         </div>
 
                                         <div v-if="unreadnotifications.length > 0">
                                             <div v-for="(unread, index) in unreadnotifications" :key="index">
-                                                <p class="alert alert-success" v-if="type === 'App\\Notifications\\AdminTicketMake'">{{unread.data.name}} ({{unread.data.email}}) has created a ticket on {{unread.created_at}}.</p>
-                                            </div>
-                                        </div>
-                                    <a  v-show="unreadnotifications.length > 0" @click="markAsRead">Mark all as read!</a>
-                                    <a  v-show="unreadnotifications.length == 0">No new notifications</a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row" v-else >
-                        <div class="col-lg-12">
-                             <div class="card " style="background-color: rgb(23,29,40)">
-                                <div class="card-header">Notifications</div>
-                                    <div class="card-body">
-                                        <div v-if="unreadnotifications.length > 0">
-                                            <div v-for="(unread, index) in unreadnotifications" :key="index">
-                                                <p class="alert alert-success" v-if="type === 'App\\Notifications\\TicketNotification'">Hi {{unread.data.name}} ({{unread.data.email}}), your ticket has been created on {{unread.created_at}}.</p>
-                                            </div>
-                                        </div>
-
-                                        <div v-if="unreadnotifications.length > 0">
-                                            <div v-for="(unread, index) in unreadnotifications" :key="index">
-                                                <p class="alert alert-success" v-if="type === 'App\\Notifications\\UpdateTicket'">Hi {{unread.data.name}} ({{unread.data.email}}) ticket has been updated on {{unread.updated_at}}.</p>
+                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\AdminTicketMake'">{{unread.data.name}} ({{unread.data.email}})  ticket ID of {{unread.data.id}} has been updated on {{unread.updated_at}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
                                             </div>
                                         </div>
                                     <a  v-show="unreadnotifications.length > 0" @click="markAsRead">Mark all as read!</a>
@@ -65,6 +42,28 @@
                                 </div>
                             </div>
                             <!-- END OF nOTIFICATION -->
+                    <div class="row" v-else >
+                        <div class="col-lg-12">
+                             <div class="card " style="background-color: rgb(23,29,40)">
+                                <div class="card-header">Notifications</div>
+                                    <div class="card-body">
+                                        <div v-if="unreadnotifications.length > 0">
+                                            <div v-for="(unread, index) in unreadnotifications" :key="index">
+                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\TicketNotification'">Hi {{unread.data.name}} ({{unread.data.email}}), your ticket has been created on {{unread.created_at}} with a ticket ID of {{unread.data.id}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
+                                            </div>
+                                        </div>
+
+                                        <div v-if="unreadnotifications.length > 0">
+                                            <div v-for="(unread, index) in unreadnotifications" :key="index">
+                                                <p class="alert alert-success" v-if="unread.type === 'App\\Notifications\\UpdateTicket'">Hi {{unread.data.name}} ({{unread.data.email}}) ticket has been updated on {{unread.updated_at}} with a ticket ID of {{unread.data.id}}. <button type="button" class="btn-close btn-close-white" aria-label="Close"  @click="MaR"></button></p>
+                                            </div>
+                                        </div>
+                                    <a  v-show="unreadnotifications.length > 0" @click="markAsRead">Mark all as read!</a>
+                                    <a  v-show="unreadnotifications.length == 0">No new notifications</a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                     <!-- end page-title -->
                     <div class="row">
                         <div class="col-sm-6 col-xl-6">
@@ -149,7 +148,7 @@
         data(){
             return {
                 unreadnotifications: {},
-                type: [],
+
             }
         },
         mounted() {
@@ -165,7 +164,7 @@
                 .then((response) => {
                     console.log(response)
                     this.unreadnotifications = response.data
-                    this.type =response.data[0].type
+
                 }).catch((errors) => {
                     console.log(errors)
                 });
@@ -177,6 +176,14 @@
                     console.log(errors)
                 });
             },
+
+            MaR(){
+                axios.get('dashboard/MaR').then((response) => {
+
+                }).catch((errors) => {
+                    console.log(errors)
+                });
+            }
         },
 
         props:

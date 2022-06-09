@@ -6,8 +6,9 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Role;
 use Illuminate\Support\Str;
-use Illuminate\Facades\Hash;
 use App\Models\Permission;
+use Illuminate\Support\Facades\Hash;
+
 
 class UserTableSeeder extends Seeder
 {
@@ -23,13 +24,13 @@ class UserTableSeeder extends Seeder
                'email' => 'test' . $i.'@test.com',
                'is_admin' => 0,
                'email_verified_at' => now(),
-               'password' => 'hakim123',
+               'password' => Hash::make('password'),
                'remember_token' => str::random(10),
            ]);
            $role = Role::where('id', 5)->first();
             $permission = Permission::where('name', 'N/A')->first();
             $user->syncRoles($role)->syncPermissions($permission);
-           
+
        }
     }
 }

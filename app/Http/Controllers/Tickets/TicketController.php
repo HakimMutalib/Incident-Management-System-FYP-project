@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Inertia\Inertia;
-use Illuminate\Notifications\Notifiable;
+use App\Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\TicketNotification;
 use App\Notifications\UpdateTicket;
@@ -28,7 +28,8 @@ class TicketController extends Controller
     {
         return Inertia::render('Tickets/Index',[
             'assignee' => User::where('is_admin', 1)->get(['name']),
-            'tickets' => Ticket::all()
+            // 'tickets' => Ticket::all(),
+            'tickets' => Ticket::latest($column = 'created_at')->paginate(20)
         ]);
     }
 
@@ -78,7 +79,7 @@ class TicketController extends Controller
      */
     public function show(Ticket $ticket)
     {
-        
+
     }
 
     /**
@@ -116,7 +117,7 @@ class TicketController extends Controller
         Notification::sendNow($admin,new AdminTicketUpdate($ticket));
         Notification::sendNow($user,new UpdateTicket($ticket));
        // $ticket->notify(new UpdateTicket($ticket));
-       
+
 
         return back();
     }
