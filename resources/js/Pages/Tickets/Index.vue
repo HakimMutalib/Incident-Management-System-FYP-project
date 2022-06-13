@@ -263,7 +263,7 @@ export default {
                     status:'',
 
                 }),
-                categoryOptions: ['Network', 'Security', 'Hardware', 'Software', 'Maintainance', 'Email', 'Other'],
+                categoryOptions: ['Network', 'Security', 'Hardware', 'Software', 'Email', 'Other'],
                 priorityOptions: ['Low', 'Medium', 'High'],
                 statusOptions:   ['In progress','Closed'],
                 assigneeOptions: this.assignee,

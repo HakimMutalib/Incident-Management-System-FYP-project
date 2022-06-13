@@ -25128,7 +25128,7 @@ __webpack_require__.r(__webpack_exports__);
         assignee: '',
         status: ''
       }),
-      categoryOptions: ['Network', 'Security', 'Hardware', 'Software', 'Maintainance', 'Email', 'Other'],
+      categoryOptions: ['Network', 'Security', 'Hardware', 'Software', 'Email', 'Other'],
       priorityOptions: ['Low', 'Medium', 'High'],
       statusOptions: ['In progress', 'Closed'],
       assigneeOptions: this.assignee
@@ -25494,7 +25494,7 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "brand-text font-weight-light"
-}, "IMS", -1
+}, "CIMS", -1
 /* HOISTED */
 );
 
@@ -30812,12 +30812,46 @@ var _hoisted_5 = {
   "class": "navbar"
 };
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li data-v-6eabef97><a class=\"nav-link scrollto active\" href=\"#hero\" data-v-6eabef97>Home</a></li><li data-v-6eabef97><a class=\"nav-link scrollto\" href=\"#about\" data-v-6eabef97>About</a></li><li data-v-6eabef97><a class=\"nav-link scrollto\" href=\"#services\" data-v-6eabef97>Features</a></li><li data-v-6eabef97><a class=\"nav-link scrollto\" href=\"#portfolio\" data-v-6eabef97>Portfolio</a></li><li data-v-6eabef97><a class=\"nav-link scrollto\" href=\"#team\" data-v-6eabef97>Team</a></li>", 5);
+var _hoisted_6 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    "class": "nav-link scrollto active",
+    href: "#hero"
+  }, "Home")], -1
+  /* HOISTED */
+  );
+});
 
+var _hoisted_7 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    "class": "nav-link scrollto",
+    href: "#about"
+  }, "About")], -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_8 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    "class": "nav-link scrollto",
+    href: "#services"
+  }, "Features")], -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_9 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    "class": "nav-link scrollto",
+    href: "#team"
+  }, "Team")], -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_10 = ["href"];
 var _hoisted_11 = ["href"];
-var _hoisted_12 = ["href"];
 
-var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
+var _hoisted_12 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "bi bi-list mobile-nav-toggle"
   }, null, -1
@@ -30825,24 +30859,152 @@ var _hoisted_13 = /*#__PURE__*/_withScopeId(function () {
   );
 });
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<section id=\"hero\" class=\"d-flex align-items-center\" data-v-6eabef97><div class=\"container\" data-v-6eabef97><div class=\"row\" data-v-6eabef97><div class=\"col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1\" data-aos=\"fade-up\" data-aos-delay=\"200\" data-v-6eabef97><h1 data-v-6eabef97>We are here to provide platforms for SMEs&#39; in incident handling.</h1><div class=\"d-flex justify-content-center justify-content-lg-start\" data-v-6eabef97><a href=\"#about\" class=\"btn-get-started scrollto\" data-v-6eabef97>Get Started</a><a href=\"\" class=\"glightbox btn-watch-video\" data-v-6eabef97><i class=\"bi bi-play-circle\" data-v-6eabef97></i><span data-v-6eabef97>Watch Video</span></a></div></div><div class=\"col-lg-6 order-1 order-lg-2 hero-img\" data-aos=\"zoom-in\" data-aos-delay=\"200\" data-v-6eabef97><img src=\"assets/img/hero-img.png\" class=\"img-fluid animated\" alt=\"\" data-v-6eabef97></div></div></div></section>", 1);
+var _hoisted_13 = {
+  id: "hero",
+  "class": "d-flex align-items-center"
+};
+var _hoisted_14 = {
+  "class": "container"
+};
+var _hoisted_15 = {
+  "class": "row"
+};
+var _hoisted_16 = {
+  "class": "col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1",
+  "data-aos": "fade-up",
+  "data-aos-delay": "200"
+};
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<main id=\"main\" data-v-6eabef97><!-- ======= About Us Section ======= --><section id=\"about\" class=\"about\" style=\"background-color:rgb(23,29,40);\" data-v-6eabef97><div class=\"container\" data-aos=\"fade-up\" data-v-6eabef97><div class=\"section-title\" data-v-6eabef97><h2 class=\"text-white\" data-v-6eabef97>About Us</h2></div><div class=\"row content\" data-v-6eabef97><div class=\"col-lg-6\" data-v-6eabef97><p class=\"text-white text-justify\" data-v-6eabef97> Our project objective is to develop a web application for incident reports for the employees to report to their security IT manager. </p><p class=\"text-white text-justify\" data-v-6eabef97> Below are the objectives for our project: </p><ul data-v-6eabef97><li class=\"text-white\" data-v-6eabef97><i class=\"ri-check-double-line\" data-v-6eabef97></i> To develop a Web-based Cyber Security Incident Management to help SMEs in Malaysia manage IT and cyber security-related incidents.</li><li class=\"text-white\" data-v-6eabef97><i class=\"ri-check-double-line\" data-v-6eabef97></i> To provide free tools for employees to report cyber security incidents that happen in their organisation and scan malware in files/websites.</li><li class=\"text-white\" data-v-6eabef97><i class=\"ri-check-double-line\" data-v-6eabef97></i> To analyze and mitigate cyber security incidents that occurs in the organization.</li></ul></div><div class=\"col-lg-6 pt-4 pt-lg-0\" data-v-6eabef97><p class=\"text-white text-justify\" data-v-6eabef97> By the end of the project, we hope that users can use the main features or purpose of our project which is reporting any incidents that happen in their company using our web application. </p><a href=\"#\" class=\"btn-learn-more\" data-v-6eabef97>Learn More</a></div></div></div></section><!-- End About Us Section --><!-- ======= Why Us Section ======= --><section id=\"why-us\" class=\"why-us section-bg\" data-v-6eabef97><div class=\"container-fluid\" data-aos=\"fade-up\" data-v-6eabef97><div class=\"row\" data-v-6eabef97><div class=\"col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1\" data-v-6eabef97><div class=\"content\" data-v-6eabef97><h3 class=\"text-white\" data-v-6eabef97>Project <strong data-v-6eabef97>Introduction</strong></h3><p class=\"text-white\" data-v-6eabef97> Brief information about the project </p></div><div class=\"accordion-list\" data-v-6eabef97><ul data-v-6eabef97><li style=\"background-color:#121212;\" data-v-6eabef97><a data-bs-toggle=\"collapse\" class=\"collapse text-white\" data-bs-target=\"#accordion-list-1\" data-v-6eabef97><span data-v-6eabef97>01</span>Who will benefit from this project?<i class=\"bx bx-chevron-down icon-show\" data-v-6eabef97></i><i class=\"bx bx-chevron-up icon-close\" data-v-6eabef97></i></a><div id=\"accordion-list-1\" class=\"collapse show\" data-bs-parent=\".accordion-list\" data-v-6eabef97><p class=\"text-white\" data-v-6eabef97> This web application project will primarily help small and medium-sized organisations (SMEs) manage their businesses more efficiently. </p></div></li><li style=\"background-color:#121212;\" data-v-6eabef97><a data-bs-toggle=\"collapse\" data-bs-target=\"#accordion-list-2\" class=\"collapsed text-white\" data-v-6eabef97><span data-v-6eabef97>02</span> What can this project do to businesses <i class=\"bx bx-chevron-down icon-show\" data-v-6eabef97></i><i class=\"bx bx-chevron-up icon-close\" data-v-6eabef97></i></a><div id=\"accordion-list-2\" class=\"collapse\" data-bs-parent=\".accordion-list\" data-v-6eabef97><p class=\"text-white\" data-v-6eabef97> Any incidents that arise in the organisation can be logged and managed using the Incidents Management System that we create. Through this project, all the SMEs that need help with analysing incidents that occur in their company can use the project that we develop to manage their company to become more organised. </p></div></li><li style=\"background-color:#121212;\" data-v-6eabef97><a data-bs-toggle=\"collapse\" data-bs-target=\"#accordion-list-3\" class=\"collapsed text-white\" data-v-6eabef97><span data-v-6eabef97>03</span> What can you expect from this project? <i class=\"bx bx-chevron-down icon-show\" data-v-6eabef97></i><i class=\"bx bx-chevron-up icon-close\" data-v-6eabef97></i></a><div id=\"accordion-list-3\" class=\"collapse\" data-bs-parent=\".accordion-list\" data-v-6eabef97><p class=\"text-white\" data-v-6eabef97> Small-medium enterprises (SMEs) can use the project to improve their security IT management in their company. </p></div></li></ul></div></div><div class=\"col-lg-5 align-items-stretch order-1 order-lg-2 img\" style=\"background-image:url(&quot;assets/img/why-us.png&quot;);\" data-aos=\"zoom-in\" data-aos-delay=\"150\" data-v-6eabef97> </div></div></div></section><!-- End Why Us Section --><!-- ======= Features Section ======= --><section id=\"services\" class=\"services section-bg\" style=\"background-color:#181824;\" data-v-6eabef97><div class=\"container\" data-aos=\"fade-up\" data-v-6eabef97><div class=\"section-title\" data-v-6eabef97><h2 data-v-6eabef97>Features</h2><p class=\"text-white\" data-v-6eabef97>CIMS provides 8 main features to help with organizations on solving incidents that occurs within the organization</p></div><div class=\"row\" data-v-6eabef97><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch p-1\" data-aos=\"zoom-in\" data-aos-delay=\"100\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bxs-coupon\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Incident Reporting</a></h4><p class=\"text-white\" data-v-6eabef97>Employees can report any type of incident with details that happen in the company. For example, the type of incident, how and when the incident happens, and the severity of the incident that happened.</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"200\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-receipt\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Cyber News</a></h4><p class=\"text-white\" data-v-6eabef97>News about the IT world that is mostly on cybersecurity attacks will be on the main page for the employees to browse.</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"300\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-file-find\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Malware File Scanning</a></h4><p class=\"text-white\" data-v-6eabef97>Scan files for malware using our scanning tools.</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"400\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-code-curly\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Malware Website Scanning</a></h4><p class=\"text-white\" data-v-6eabef97>Scan websites or URL using our scanning tools</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"300\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-group\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Manage Incidents</a></h4><p class=\"text-white\" data-v-6eabef97>Admin can assign workers to solve the incident from the worker database and Admin can resolve the incident and close the ticket of the incident</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"400\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-tachometer\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Dashboard</a></h4><p class=\"text-white\" data-v-6eabef97>Admin can see the dashboard that contains the analytic of the visualisation data on the companys&#39; incidents.</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"300\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bxs-user-detail\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Admin Panel</a></h4><p class=\"text-white\" data-v-6eabef97>Our system provides admins adminstration tools for admins to manage their employees in the organization</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"400\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bxs-bell-ring\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Notifications</a></h4><p class=\"text-white\" data-v-6eabef97>Get email alert when new incidents occur within the organization</p></div></div></div></div></section><!-- End Services Section --><!-- ======= Portfolio Section ======= --><section id=\"portfolio\" class=\"portfolio\" style=\"background-color:#171D28;\" data-v-6eabef97><div class=\"container\" data-aos=\"fade-up\" data-v-6eabef97><div class=\"section-title\" data-v-6eabef97><h2 data-v-6eabef97>User Interface</h2><p class=\"text-white\" data-v-6eabef97></p></div><ul id=\"portfolio-flters\" class=\"d-flex justify-content-center\" data-aos=\"fade-up\" data-aos-delay=\"100\" data-v-6eabef97><li data-filter=\"*\" class=\"filter-active text-white\" data-v-6eabef97>All</li><li data-filter=\".filter-app\" class=\"text-white\" data-v-6eabef97>Dashboard</li><li data-filter=\".filter-card\" class=\"text-white\" data-v-6eabef97>Administration</li><li data-filter=\".filter-web\" class=\"text-white\" data-v-6eabef97>Virus</li><li data-filter=\".filter-admin\" class=\"text-white\" data-v-6eabef97>Ticket</li><li data-filter=\".filter-news\" class=\"text-white\" data-v-6eabef97>News</li></ul><div class=\"row portfolio-container\" data-aos=\"fade-up\" data-aos-delay=\"200\" data-v-6eabef97><div class=\"col-lg-4 col-md-6 portfolio-item filter-app\" data-v-6eabef97><div class=\"portfolio-img\" data-v-6eabef97><img src=\"assets/img/portfolio/Dashboard.png\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"portfolio-info\" data-v-6eabef97><h4 data-v-6eabef97>Dashboard</h4></div></div><div class=\"col-lg-4 col-md-6 portfolio-item filter-admin\" data-v-6eabef97><div class=\"portfolio-img\" data-v-6eabef97><img src=\"assets/img/portfolio/Ticket.png\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"portfolio-info\" data-v-6eabef97><h4 data-v-6eabef97>Ticket Page</h4></div></div><div class=\"col-lg-4 col-md-6 portfolio-item filter-news\" data-v-6eabef97><div class=\"portfolio-img\" data-v-6eabef97><img src=\"assets/img/portfolio/CyberNews.png\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"portfolio-info\" data-v-6eabef97><h4 data-v-6eabef97>Cyber News Page</h4></div></div><div class=\"col-lg-4 col-md-6 portfolio-item filter-web\" data-v-6eabef97><div class=\"portfolio-img\" data-v-6eabef97><img src=\"assets/img/portfolio/VirusScanner.png\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"portfolio-info\" data-v-6eabef97><h4 data-v-6eabef97>URL Malware Scanner</h4></div></div><div class=\"col-lg-4 col-md-6 portfolio-item filter-web\" data-v-6eabef97><div class=\"portfolio-img\" data-v-6eabef97><img src=\"assets/img/portfolio/VirusScanner2.png\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"portfolio-info\" data-v-6eabef97><h4 data-v-6eabef97>File Malware Scanner</h4></div></div><div class=\"col-lg-4 col-md-6 portfolio-item filter-card\" data-v-6eabef97><div class=\"portfolio-img\" data-v-6eabef97><img src=\"assets/img/portfolio/User.png\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"portfolio-info\" data-v-6eabef97><h4 data-v-6eabef97>User Page</h4></div></div><div class=\"col-lg-4 col-md-6 portfolio-item filter-card\" data-v-6eabef97><div class=\"portfolio-img\" data-v-6eabef97><img src=\"assets/img/portfolio/Admin.png\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"portfolio-info\" data-v-6eabef97><h4 data-v-6eabef97>Admin Page</h4></div></div><div class=\"col-lg-4 col-md-6 portfolio-item filter-card\" data-v-6eabef97><div class=\"portfolio-img\" data-v-6eabef97><img src=\"assets/img/portfolio/RolePerm.png\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"portfolio-info\" data-v-6eabef97><h4 data-v-6eabef97>Role And Permission</h4></div></div><div class=\"col-lg-4 col-md-6 portfolio-item filter-card\" data-v-6eabef97><div class=\"portfolio-img\" data-v-6eabef97><img src=\"assets/img/portfolio/Permission.png\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"portfolio-info\" data-v-6eabef97><h4 data-v-6eabef97>Permission Page</h4></div></div></div></div></section><!-- End Portfolio Section --><!-- ======= Team Section ======= --><section id=\"team\" class=\"team section-bg\" data-v-6eabef97><div class=\"container\" data-aos=\"fade-up\" data-v-6eabef97><div class=\"section-title\" data-v-6eabef97><h2 data-v-6eabef97>Meet The Team</h2><p class=\"text-white\" data-v-6eabef97>We are a commited final year students that are here to tackle all sorts of challenge</p></div><div class=\"row\" data-v-6eabef97><div class=\"col-lg-6 mt-4 mt-lg-0\" data-v-6eabef97><div class=\"member d-flex align-items-start\" style=\"background-color:#121212;\" data-aos=\"zoom-in\" data-aos-delay=\"200\" data-v-6eabef97><div class=\"pic\" data-v-6eabef97><div data-v-6eabef97></div><img src=\"assets/img/team/image8.jpeg\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"member-info\" data-v-6eabef97><h4 class=\"text-white\" data-v-6eabef97>Hakim Mutalib</h4><span class=\"text-white\" data-v-6eabef97></span><p class=\"text-white\" data-v-6eabef97>Fourth year BIT student specialized in Information Assurance and Security</p><div class=\"social\" data-v-6eabef97><a href=\"https://github.com/HakimMutalib\" data-v-6eabef97><i class=\"ri-github-fill\" data-v-6eabef97></i></a><a href=\"https://www.linkedin.com/in/hakim-mutalib-0b6a9b195/\" data-v-6eabef97><i class=\"ri-linkedin-box-fill\" data-v-6eabef97></i></a></div></div></div></div><div class=\"col-lg-6 mt-4 mt-lg-0\" data-v-6eabef97><div class=\"member d-flex align-items-start\" style=\"background-color:#121212;\" data-aos=\"zoom-in\" data-aos-delay=\"200\" data-v-6eabef97><div class=\"pic\" data-v-6eabef97><div data-v-6eabef97></div><img src=\"assets/img/team/image9.jpg\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"member-info\" data-v-6eabef97><h4 class=\"text-white\" data-v-6eabef97>Amirul Aiman</h4><span class=\"text-white\" data-v-6eabef97></span><p class=\"text-white\" data-v-6eabef97>Fourth year BIT student specialized in Business Information Analytics and Data Science</p><div class=\"social\" data-v-6eabef97><a href=\"https://github.com/amirulaemann\" data-v-6eabef97><i class=\"ri-github-fill\" data-v-6eabef97></i></a><a href=\"\" data-v-6eabef97><i class=\"ri-linkedin-box-fill\" data-v-6eabef97></i></a></div></div></div></div></div></div></section><!-- End Team Section --></main>", 1);
+var _hoisted_17 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", null, "This system is to provide assistance for SMEs to manage cybersecurity incidents.", -1
+  /* HOISTED */
+  );
+});
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<footer id=\"footer\" data-v-6eabef97><div class=\"footer-top\" style=\"background-color:#0A0A0F;\" data-v-6eabef97><div class=\"container\" data-v-6eabef97><div class=\"row\" data-v-6eabef97><div class=\"col-lg-6 col-md-6 footer-contact\" data-v-6eabef97><h3 data-v-6eabef97>CIMS</h3><p class=\"text-white\" data-v-6eabef97> This project is still under construction and it is not production ready. </p></div><div class=\"col-lg-6 col-md-6 footer-links\" data-v-6eabef97><h4 data-v-6eabef97></h4><ul data-v-6eabef97><li data-v-6eabef97><i class=\"bx bx-chevron-right\" data-v-6eabef97></i> <a href=\"#\" data-v-6eabef97>Home</a></li><li data-v-6eabef97><i class=\"bx bx-chevron-right\" data-v-6eabef97></i> <a href=\"#\" data-v-6eabef97>About us</a></li><li data-v-6eabef97><i class=\"bx bx-chevron-right\" data-v-6eabef97></i> <a href=\"#\" data-v-6eabef97>Services</a></li><li data-v-6eabef97><i class=\"bx bx-chevron-right\" data-v-6eabef97></i> <a href=\"#\" data-v-6eabef97>Terms of service</a></li><li data-v-6eabef97><i class=\"bx bx-chevron-right\" data-v-6eabef97></i> <a href=\"#\" data-v-6eabef97>Privacy policy</a></li></ul></div></div></div></div><div class=\"container footer-bottom clearfix\" style=\"background-color:#171d28;\" data-v-6eabef97><div class=\"copyright\" data-v-6eabef97> © Copyright <strong data-v-6eabef97><span data-v-6eabef97>Hakim Mutalib &amp; Amirul Aiman</span></strong>. All Rights Reserved </div><div class=\"credits\" data-v-6eabef97><!-- All the links in the footer should remain intact. --><!-- You can delete the links only if you purchased the pro version. --><!-- Licensing information: https://bootstrapmade.com/license/ --><!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ --></div></div></footer>", 1);
+var _hoisted_18 = {
+  "class": "d-flex justify-content-center justify-content-lg-start"
+};
+var _hoisted_19 = ["href"];
+
+var _hoisted_20 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    href: "",
+    "class": "glightbox btn-watch-video"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "bi bi-play-circle"
+  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Watch Video")], -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_21 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "col-lg-6 order-1 order-lg-2 hero-img",
+    "data-aos": "zoom-in",
+    "data-aos-delay": "200"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: "assets/img/hero-img.png",
+    "class": "img-fluid animated",
+    alt: ""
+  })], -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<main id=\"main\" data-v-6eabef97><!-- ======= About Us Section ======= --><section id=\"about\" class=\"about\" style=\"background-color:rgb(23,29,40);\" data-v-6eabef97><div class=\"container\" data-aos=\"fade-up\" data-v-6eabef97><div class=\"section-title\" data-v-6eabef97><h2 class=\"text-white\" data-v-6eabef97>About CIMS</h2></div><div class=\"row content\" data-v-6eabef97><div class=\"col-lg-6\" data-v-6eabef97><p class=\"text-white text-justify\" data-v-6eabef97> CIMS is a web application for organizations to manage cybersecurity incidents. </p><p class=\"text-white text-justify\" data-v-6eabef97> Below are the functionalities of CIMS: </p><ul data-v-6eabef97><li class=\"text-white\" data-v-6eabef97><i class=\"ri-check-double-line\" data-v-6eabef97></i>To get report about any cyber incidents from employees</li><li class=\"text-white\" data-v-6eabef97><i class=\"ri-check-double-line\" data-v-6eabef97></i>To provide a tool for employees to scan for cyber threats in files and websites</li><li class=\"text-white\" data-v-6eabef97><i class=\"ri-check-double-line\" data-v-6eabef97></i>For employees to get updates from the latest cybersecurity news</li><li class=\"text-white\" data-v-6eabef97><i class=\"ri-check-double-line\" data-v-6eabef97></i>To get notifications when incident tickets are created, assigned and solved</li><li class=\"text-white\" data-v-6eabef97><i class=\"ri-check-double-line\" data-v-6eabef97></i>For security administrators to manage cybersecurity incidents in the organization and view the summary of the overall status in the dashboard</li></ul></div><div class=\"col-lg-6 pt-4 pt-lg-0\" data-v-6eabef97><p class=\"text-white text-justify\" data-v-6eabef97> CIMS primarily helps organizations especially SMEs to manage cybersecurity incidents to prevent them from suffering more serious business disruptions. </p><a href=\"#\" class=\"btn-learn-more\" data-v-6eabef97>Learn More</a></div></div></div></section><!-- End About Us Section --><!-- ======= Why Us Section ======= --><section id=\"why-us\" class=\"why-us section-bg\" data-v-6eabef97><div class=\"container-fluid\" data-aos=\"fade-up\" data-v-6eabef97><div class=\"row\" data-v-6eabef97><div class=\"col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1\" data-v-6eabef97><div class=\"accordion-list\" data-v-6eabef97><ul data-v-6eabef97><li style=\"background-color:#121212;\" data-v-6eabef97><a data-bs-toggle=\"collapse\" class=\"collapse text-white\" data-bs-target=\"#accordion-list-1\" data-v-6eabef97><span data-v-6eabef97>01</span>Who will benefit from this project?<i class=\"bx bx-chevron-down icon-show\" data-v-6eabef97></i><i class=\"bx bx-chevron-up icon-close\" data-v-6eabef97></i></a><div id=\"accordion-list-1\" class=\"collapse show\" data-bs-parent=\".accordion-list\" data-v-6eabef97><p class=\"text-white\" data-v-6eabef97> This web application project will primarily help small and medium-sized organisations (SMEs) manage their businesses more efficiently. </p></div></li><li style=\"background-color:#121212;\" data-v-6eabef97><a data-bs-toggle=\"collapse\" data-bs-target=\"#accordion-list-2\" class=\"collapsed text-white\" data-v-6eabef97><span data-v-6eabef97>02</span> What can this project do to businesses <i class=\"bx bx-chevron-down icon-show\" data-v-6eabef97></i><i class=\"bx bx-chevron-up icon-close\" data-v-6eabef97></i></a><div id=\"accordion-list-2\" class=\"collapse\" data-bs-parent=\".accordion-list\" data-v-6eabef97><p class=\"text-white\" data-v-6eabef97> CIMS aims to protect the organization from any cyber incidents that happen by receiving reports from end users, creating tickets and assign each ticket to security admins to solve the incidents.</p><p class=\"text-white\" data-v-6eabef97> CIMS can also help organizations to analyze these incidents in order to manage all cyber incidents in the organization </p></div></li><li style=\"background-color:#121212;\" data-v-6eabef97><a data-bs-toggle=\"collapse\" data-bs-target=\"#accordion-list-3\" class=\"collapsed text-white\" data-v-6eabef97><span data-v-6eabef97>03</span>Who are the users of CIMS?<i class=\"bx bx-chevron-down icon-show\" data-v-6eabef97></i><i class=\"bx bx-chevron-up icon-close\" data-v-6eabef97></i></a><div id=\"accordion-list-3\" class=\"collapse\" data-bs-parent=\".accordion-list\" data-v-6eabef97><p class=\"text-white\" data-v-6eabef97> 1. End users - employees of the organization can use CIMS to report any cyber incident that they experience. They can also use CIMS to scan for cyber threats in files and websites</p><p class=\"text-white\" data-v-6eabef97>2. Security Administrators - admins can use CIMS to address the incidents and view the overall cybersecurity status of the organization</p></div></li></ul></div></div><div class=\"col-lg-5 align-items-stretch order-1 order-lg-2 img\" style=\"background-image:url(&quot;assets/img/why-us.png&quot;);\" data-aos=\"zoom-in\" data-aos-delay=\"150\" data-v-6eabef97> </div></div></div></section><!-- End Why Us Section --><!-- ======= Features Section ======= --><section id=\"services\" class=\"services section-bg\" style=\"background-color:#181824;\" data-v-6eabef97><div class=\"container\" data-aos=\"fade-up\" data-v-6eabef97><div class=\"section-title\" data-v-6eabef97><h2 data-v-6eabef97>Features</h2><p class=\"text-white\" data-v-6eabef97>CIMS provides 8 main features to help with organizations on solving incidents that occurs within the organization</p></div><div class=\"row\" data-v-6eabef97><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch p-1\" data-aos=\"zoom-in\" data-aos-delay=\"100\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bxs-coupon\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Incident Reporting</a></h4><p class=\"text-white\" data-v-6eabef97>Employees can report any type of incident with details that happen in the company. For example, the type of incident, how and when the incident happens, and the severity of the incident that happened</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"200\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-receipt\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Cyber News</a></h4><p class=\"text-white\" data-v-6eabef97>News about the cyber world can be accessed by users in order to get updates of the latest cyber attacks, and ways to address them</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"300\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-file-find\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Malware File Scanning</a></h4><p class=\"text-white\" data-v-6eabef97>Users can scan digital files to know whether malicious software (malware) exist in their files or not</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"400\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-code-curly\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Malware Website Scanning</a></h4><p class=\"text-white\" data-v-6eabef97>User can scan any websites by providing the URL to know whether the website is safe to be browsed or not</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"300\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-group\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Manage Incidents</a></h4><p class=\"text-white\" data-v-6eabef97>Admin can assign workers to solve the incident from the worker database and Admin can resolve the incident and close the ticket of the incident. Security admins are also able to analyze each incident to prevent a more serious disruption from occuring. </p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"400\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bx-tachometer\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Dashboard</a></h4><p class=\"text-white\" data-v-6eabef97>Security admins can view the dashboard to get a visualization of summarized cyber incidents to allow data analytics to be performed</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"300\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bxs-user-detail\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Admin Panel</a></h4><p class=\"text-white\" data-v-6eabef97>CIMS provides administration tools to manage users and their roles and permissions in this system</p></div></div><div class=\"col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0 p-1\" data-aos=\"zoom-in\" data-aos-delay=\"400\" data-v-6eabef97><div class=\"icon-box\" data-v-6eabef97><div class=\"icon\" data-v-6eabef97><i class=\"bx bxs-bell-ring\" data-v-6eabef97></i></div><h4 data-v-6eabef97><a href=\"\" data-v-6eabef97>Notifications</a></h4><p class=\"text-white\" data-v-6eabef97>Get email alert when new incidents occur within the organization</p></div></div></div></div></section><!-- End Services Section --><!-- ======= Team Section ======= --><section id=\"team\" class=\"team section-bg\" data-v-6eabef97><div class=\"container\" data-aos=\"fade-up\" data-v-6eabef97><div class=\"section-title\" data-v-6eabef97><h2 data-v-6eabef97>Meet The Team</h2><p class=\"text-white\" data-v-6eabef97>We are dedicated to help organizations to manage cyber incidents and tailor CIMS to meets with each organization&#39;s needs</p></div><div class=\"row\" data-v-6eabef97><div class=\"col-lg-6 mt-4 mt-lg-0\" data-v-6eabef97><div class=\"member d-flex align-items-start\" style=\"background-color:#121212;\" data-aos=\"zoom-in\" data-aos-delay=\"200\" data-v-6eabef97><div class=\"pic\" data-v-6eabef97><div data-v-6eabef97></div><img src=\"assets/img/team/image8.jpeg\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"member-info\" data-v-6eabef97><h4 class=\"text-white\" data-v-6eabef97>Hakim Mutalib</h4><span class=\"text-white\" data-v-6eabef97></span><p class=\"text-white\" data-v-6eabef97>Fourth year BIT student specialized in Information Assurance and Security</p><div class=\"social\" data-v-6eabef97><a href=\"https://github.com/HakimMutalib\" data-v-6eabef97><i class=\"ri-github-fill\" data-v-6eabef97></i></a><a href=\"https://www.linkedin.com/in/hakim-mutalib-0b6a9b195/\" data-v-6eabef97><i class=\"ri-linkedin-box-fill\" data-v-6eabef97></i></a></div></div></div></div><div class=\"col-lg-6 mt-4 mt-lg-0\" data-v-6eabef97><div class=\"member d-flex align-items-start\" style=\"background-color:#121212;\" data-aos=\"zoom-in\" data-aos-delay=\"200\" data-v-6eabef97><div class=\"pic\" data-v-6eabef97><div data-v-6eabef97></div><img src=\"assets/img/team/image9.jpg\" class=\"img-fluid\" alt=\"\" data-v-6eabef97></div><div class=\"member-info\" data-v-6eabef97><h4 class=\"text-white\" data-v-6eabef97>Amirul Aiman</h4><span class=\"text-white\" data-v-6eabef97></span><p class=\"text-white\" data-v-6eabef97>Fourth year BIT student specialized in Business Information Analytics and Data Science</p><div class=\"social\" data-v-6eabef97><a href=\"https://github.com/amirulaemann\" data-v-6eabef97><i class=\"ri-github-fill\" data-v-6eabef97></i></a><a href=\"\" data-v-6eabef97><i class=\"ri-linkedin-box-fill\" data-v-6eabef97></i></a></div></div></div></div></div></div></section><!-- End Team Section --></main>", 1);
+
+var _hoisted_23 = {
+  id: "footer"
+};
+var _hoisted_24 = {
+  "class": "footer-top",
+  style: {
+    "background-color": "#0A0A0F"
+  }
+};
+var _hoisted_25 = {
+  "class": "container"
+};
+var _hoisted_26 = {
+  "class": "row"
+};
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-6 col-md-6 footer-links\" data-v-6eabef97><h4 data-v-6eabef97></h4><ul data-v-6eabef97><li data-v-6eabef97><i class=\"bx bx-chevron-right\" data-v-6eabef97></i> <a href=\"#hero\" data-v-6eabef97>Home</a></li><li data-v-6eabef97><i class=\"bx bx-chevron-right\" data-v-6eabef97></i> <a href=\"#about\" data-v-6eabef97>About us</a></li><li data-v-6eabef97><i class=\"bx bx-chevron-right\" data-v-6eabef97></i> <a href=\"#services\" data-v-6eabef97>Features</a></li><li data-v-6eabef97><i class=\"bx bx-chevron-right\" data-v-6eabef97></i> <a href=\"#team\" data-v-6eabef97>Team</a></li></ul></div>", 1);
+
+var _hoisted_28 = {
+  "class": "col-lg-6 col-md-6 footer-links"
+};
+
+var _hoisted_29 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", null, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_30 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "bx bx-chevron-right"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)();
+
+var _hoisted_32 = ["href"];
+
+var _hoisted_33 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "bx bx-chevron-right"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)();
+
+var _hoisted_35 = ["href"];
+
+var _hoisted_36 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "container footer-bottom clearfix",
+    style: {
+      "background-color": "#171d28"
+    }
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "copyright"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" © Copyright "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Hakim Mutalib & Amirul Aiman")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(". All Rights Reserved ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "credits"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" All the links in the footer should remain intact. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" You can delete the links only if you purchased the pro version. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Licensing information: https://bootstrapmade.com/license/ "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ ")])], -1
+  /* HOISTED */
+  );
+});
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("body", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ======= Header ======= "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Uncomment below if you prefer to use an image logo "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a href=\"index.html\" class=\"logo me-auto\"><img src=\"assets/img/logo.png\" alt=\"\" class=\"img-fluid\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("body", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ======= Header ======= "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Uncomment below if you prefer to use an image logo "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a href=\"index.html\" class=\"logo me-auto\"><img src=\"assets/img/logo.png\" alt=\"\" class=\"img-fluid\"></a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [_hoisted_6, _hoisted_7, _hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "getstarted scrollto",
     href: _ctx.route('admin.dashboard.index')
   }, "Dashboard", 8
   /* PROPS */
-  , _hoisted_11)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  , _hoisted_10)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     "class": "getstarted scrollto",
     href: _ctx.route('login')
   }, "Login", 8
   /* PROPS */
-  , _hoisted_12)])]), _hoisted_13]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .navbar ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End Header "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ======= Hero Section ======= "), _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End Hero "), _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End #main "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ======= Footer ======= "), _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End Footer ")])], 64
+  , _hoisted_11)])]), _hoisted_12]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" .navbar ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End Header "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ======= Hero Section ======= "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    href: _ctx.route('admin.dashboard.index'),
+    "class": "btn-get-started scrollto"
+  }, "Get Started", 8
+  /* PROPS */
+  , _hoisted_19), _hoisted_20])]), _hoisted_21])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End Hero "), _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End #main "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ======= Footer ======= "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [_hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_30, _hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    href: _ctx.route('admin.dashboard.index')
+  }, "Dashboard", 8
+  /* PROPS */
+  , _hoisted_32)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [_hoisted_33, _hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    href: _ctx.route('login')
+  }, "Login", 8
+  /* PROPS */
+  , _hoisted_35)])])])])])]), _hoisted_36]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End Footer ")])], 64
   /* STABLE_FRAGMENT */
   );
 }

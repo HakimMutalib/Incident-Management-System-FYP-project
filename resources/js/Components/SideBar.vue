@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <inertia-link :href="route('admin.dashboard.index')" class="brand-link">
       <img src="/assets/img/IMS%20Logo.png" alt="gear Logo" class="brand-image img-circle elevation-3" >
-      <span class="brand-text font-weight-light">IMS</span>
+      <span class="brand-text font-weight-light">CIMS</span>
     </inertia-link>
 
     <!-- Sidebar -->

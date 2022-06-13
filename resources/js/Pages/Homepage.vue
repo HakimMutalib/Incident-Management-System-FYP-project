@@ -38,7 +38,6 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Features</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a  class="getstarted scrollto" :href="route('admin.dashboard.index')">Dashboard</a></li>
           <li><a class="getstarted scrollto"  :href="route('login')">Login</a></li>
@@ -55,9 +54,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>We are here to provide platforms for SMEs' in incident handling.</h1>
+          <h1>This system is to provide assistance for SMEs to manage cybersecurity incidents.</h1>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a :href="route('admin.dashboard.index')" class="btn-get-started scrollto">Get Started</a>
             <a href="" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
@@ -77,26 +76,28 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 class="text-white">About Us</h2>
+          <h2 class="text-white">About CIMS</h2>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
             <p class="text-white text-justify">
-              Our project objective is to develop a web application for incident reports for the employees to report to their security IT manager.
+              CIMS is a web application for organizations to manage cybersecurity incidents.
             </p>
             <p class="text-white text-justify">
-              Below are the objectives for our project:
+              Below are the functionalities of CIMS:
             </p>
             <ul>
-              <li class="text-white"><i class="ri-check-double-line"></i> To develop a Web-based Cyber Security Incident Management to help SMEs in Malaysia manage IT and cyber security-related incidents.</li>
-              <li class="text-white"><i class="ri-check-double-line"></i> To provide free tools for employees to report cyber security incidents that happen in their organisation and scan malware in files/websites.</li>
-              <li class="text-white"><i class="ri-check-double-line"></i> To analyze and mitigate cyber security incidents that occurs in the organization.</li>
+              <li class="text-white"><i class="ri-check-double-line"></i>To get report about any cyber incidents from employees</li>
+              <li class="text-white"><i class="ri-check-double-line"></i>To provide a tool for employees to scan for cyber threats in files and websites</li>
+              <li class="text-white"><i class="ri-check-double-line"></i>For employees to get updates from the latest cybersecurity news</li>
+               <li class="text-white"><i class="ri-check-double-line"></i>To get notifications when incident tickets are created, assigned and solved</li>
+              <li class="text-white"><i class="ri-check-double-line"></i>For security administrators to manage cybersecurity incidents in the organization and view the summary of the overall status in the dashboard</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p class="text-white text-justify">
-              By the end of the project, we hope that users can use the main features or purpose of our project which is reporting any incidents that happen in their company using our web application.
+             CIMS primarily helps organizations especially SMEs to manage cybersecurity incidents to prevent them from suffering more serious business disruptions.
             </p>
             <a href="#" class="btn-learn-more">Learn More</a>
           </div>
@@ -113,12 +114,7 @@
 
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
-            <div class="content">
-              <h3 class="text-white">Project <strong>Introduction</strong></h3>
-              <p class="text-white">
-                  Brief information about the project
-              </p>
-            </div>
+
 
             <div class="accordion-list"  >
               <ul>
@@ -135,17 +131,21 @@
                   <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed text-white"><span>02</span> What can this project do to businesses <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
                     <p class="text-white">
-                       Any incidents that arise in the organisation can be logged and managed using the Incidents Management System that we create. Through this project, all the SMEs that need help with analysing incidents that occur in their company can use the project that we develop to manage their company to become more organised.
+                      CIMS aims to protect the organization from any cyber incidents that happen by receiving reports from end users, creating tickets and assign each ticket to security admins to solve the incidents.</p>
+                    <p class="text-white">
+                        CIMS can also help organizations to analyze these incidents in order to manage all cyber incidents in the organization
                     </p>
+
                   </div>
                 </li>
 
                 <li style="background-color:#121212">
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed text-white"><span>03</span> What can you expect from this project? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed text-white"><span>03</span>Who are the users of CIMS?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
                     <p class="text-white">
-                      Small-medium enterprises (SMEs) can use the project to improve their security IT management in their company.
-                    </p>
+                     1. End users - employees of the organization can use CIMS to report any cyber incident that they experience. They can also use CIMS to scan for cyber threats in files and websites</p>
+                    <p class="text-white">2. Security Administrators - admins can use CIMS to address the incidents and view the overall cybersecurity status of the organization</p>
+
                   </div>
                 </li>
 
@@ -175,7 +175,7 @@
             <div class="icon-box">
               <div class="icon"><i class='bx bxs-coupon'></i></div>
               <h4><a href="">Incident Reporting</a></h4>
-              <p class="text-white">Employees can report any type of incident with details that happen in the company. For example, the type of incident, how and when the incident happens, and the severity of the incident that happened.</p>
+              <p class="text-white">Employees can report any type of incident with details that happen in the company. For example, the type of incident, how and when the incident happens, and the severity of the incident that happened</p>
             </div>
           </div>
 
@@ -183,7 +183,7 @@
             <div class="icon-box">
               <div class="icon"><i class='bx bx-receipt'></i></div>
               <h4><a href="">Cyber News</a></h4>
-              <p class="text-white">News about the IT world that is mostly on cybersecurity attacks will be on the main page for the employees to browse.</p>
+              <p class="text-white">News about the cyber world can be accessed by users in order to get updates of the latest cyber attacks, and ways to address them</p>
             </div>
           </div>
 
@@ -191,7 +191,7 @@
             <div class="icon-box">
               <div class="icon"><i class='bx bx-file-find'></i></div>
               <h4><a href="">Malware File Scanning</a></h4>
-              <p class="text-white">Scan files for malware using our scanning tools.</p>
+              <p class="text-white">Users can scan digital files to know whether malicious software (malware) exist in their files or not</p>
             </div>
           </div>
 
@@ -199,7 +199,7 @@
             <div class="icon-box">
               <div class="icon"><i class='bx bx-code-curly' ></i></div>
               <h4><a href="">Malware Website Scanning</a></h4>
-              <p class="text-white">Scan websites or URL using our scanning tools</p>
+              <p class="text-white">User can scan any websites by providing the URL to know whether the website is safe to be browsed or not</p>
             </div>
           </div>
 
@@ -207,7 +207,7 @@
             <div class="icon-box">
               <div class="icon"><i class='bx bx-group'></i></div>
               <h4><a href="">Manage Incidents</a></h4>
-              <p class="text-white">Admin can assign workers to solve the incident from the worker database and Admin can resolve the incident and close the ticket of the incident</p>
+              <p class="text-white">Admin can assign workers to solve the incident from the worker database and Admin can resolve the incident and close the ticket of the incident. Security admins are also able to analyze each incident to prevent a more serious disruption from occuring. </p>
             </div>
           </div>
 
@@ -215,7 +215,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
               <h4><a href="">Dashboard</a></h4>
-              <p class="text-white">Admin can see the dashboard that contains the analytic of the visualisation data on the companys' incidents.</p>
+              <p class="text-white">Security admins can view the dashboard to get a visualization of summarized cyber incidents to allow data analytics to be performed</p>
             </div>
           </div>
 
@@ -223,7 +223,7 @@
             <div class="icon-box">
               <div class="icon"><i class='bx bxs-user-detail'></i></div>
               <h4><a href="">Admin Panel</a></h4>
-              <p class="text-white">Our system provides admins adminstration tools for admins to manage their employees in the organization</p>
+              <p class="text-white">CIMS provides administration tools to manage users and their roles and permissions in this system</p>
             </div>
           </div>
 
@@ -240,93 +240,7 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio" style="background-color:#171D28">
-      <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>User Interface</h2>
-          <p class="text-white"></p>
-        </div>
-
-        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active text-white" >All</li>
-          <li data-filter=".filter-app" class="text-white">Dashboard</li>
-          <li data-filter=".filter-card" class="text-white">Administration</li>
-          <li data-filter=".filter-web" class="text-white">Virus</li>
-          <li data-filter=".filter-admin" class="text-white">Ticket</li>
-           <li data-filter=".filter-news" class="text-white">News</li>
-        </ul>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/Dashboard.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Dashboard</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-admin">
-            <div class="portfolio-img"><img src="assets/img/portfolio/Ticket.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Ticket Page</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-news">
-            <div class="portfolio-img"><img src="assets/img/portfolio/CyberNews.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Cyber News Page</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/VirusScanner.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>URL Malware Scanner</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/VirusScanner2.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>File Malware Scanner</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/User.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>User Page</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/Admin.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Admin Page</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/RolePerm.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Role And Permission</h4>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/Permission.png" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Permission Page</h4>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
@@ -334,7 +248,7 @@
 
         <div class="section-title">
           <h2>Meet The Team</h2>
-          <p class="text-white">We are a commited final year students that are here to tackle all sorts of challenge</p>
+          <p class="text-white">We are dedicated to help organizations to manage cyber incidents and tailor CIMS to meets with each organization's needs</p>
         </div>
 
         <div class="row">
@@ -387,26 +301,25 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-6 col-md-6 footer-contact">
-            <h3>CIMS</h3>
-            <p class="text-white">
-            This project is still under construction and it is not production ready.
-            </p>
+
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4></h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Features</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
+            </ul>
           </div>
 
           <div class="col-lg-6 col-md-6 footer-links">
             <h4></h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a :href="route('admin.dashboard.index')">Dashboard</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a :href="route('login')">Login</a></li>
             </ul>
           </div>
-
-
-
         </div>
       </div>
     </div>
