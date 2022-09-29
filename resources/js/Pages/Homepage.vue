@@ -57,7 +57,7 @@
           <h1>This system is to provide assistance for SMEs to manage cybersecurity incidents.</h1>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a :href="route('admin.dashboard.index')" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://youtu.be/4Pf7-QEmKLE" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="https://youtu.be/4Pf7-QEmKLE" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Videoss</span></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
