@@ -39,7 +39,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Features</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a  class="getstarted scrollto" :href="route('admin.dashboard.index')">Dashboards</a></li>
+          <li><a  class="getstarted scrollto" :href="route('admin.dashboard.index')">Dashboard</a></li>
           <li><a class="getstarted scrollto"  :href="route('login')">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -57,7 +57,7 @@
           <h1>This system is to provide assistance for SMEs to manage cybersecurity incidents.</h1>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a :href="route('admin.dashboard.index')" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://youtu.be/4Pf7-QEmKLE" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Videoss</span></a>
+            <a href="https://youtu.be/4Pf7-QEmKLE" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
