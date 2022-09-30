@@ -342,7 +342,7 @@
 </template>
 
 
-<script src="C:\Users\amiru\Documents\GitHub\Incident-Management-System-FYP-project\public\assets\js\main.js"></script>
+<script src="..\..\assets\js\main.js"></script>
 
 <style lang="scss" scoped>
 .body {
