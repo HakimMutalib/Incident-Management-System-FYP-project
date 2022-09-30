@@ -342,7 +342,7 @@
 </template>
 
 
-<script src="..\..\..\assets\js\main.js"></script>
+
 
 <style lang="scss" scoped>
 .body {
