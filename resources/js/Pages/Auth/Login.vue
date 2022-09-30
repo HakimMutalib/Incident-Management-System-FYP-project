@@ -4,7 +4,7 @@
 
     <jet-authentication-card>
       <template #logo>
-        <img  :href="route('Homepage')" src="/assets/img/IMS Logo.png" alt="IMS Logo" class="img-fluid">
+        <img   src="/assets/img/IMS Logo.png" alt="IMS Logo" class="img-fluid">
       </template>
 
       <div class="card-body" style="background-color:black">
