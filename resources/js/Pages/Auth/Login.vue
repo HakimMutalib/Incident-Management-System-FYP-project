@@ -4,7 +4,7 @@
 
     <jet-authentication-card>
       <template #logo>
-        <img src="/assets/img/IMS Logo.png" alt="IMS Logo" class="img-fluid">
+        <img  :href="route('Homepage')" src="/assets/img/IMS Logo.png" alt="IMS Logo" class="img-fluid">
       </template>
 
       <div class="card-body" style="background-color:black">
@@ -14,7 +14,7 @@
         <div v-if="status" class="alert alert-success mb-3 rounded-0" role="alert">
           {{ status }}
         </div>
-  
+
         <form  @submit.prevent="submit">
           <div class="mb-3">
             <jet-label  for="email" value="Email" />
