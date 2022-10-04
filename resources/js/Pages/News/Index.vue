@@ -22,15 +22,14 @@
                       <article v-for="(article, index) in articles" :key="index"  class="col-lg-4 mb-3 d-flex align-items-stretch" >
                               <div class="card-deck ">
                                   <div class="card">
-                                        <img class="card-img-top" v-if="article.urlToImage" :src="article.urlToImage" style="width: 100%; height: 15vw; object-fit: cover;" alt="200x200">
+                                        <img class="card-img-top" v-if="article.media" :src="article.media" style="width: 100%; height: 15vw; object-fit: cover;" alt="200x200">
                                         <li v-else class="fas fa-image"></li>
                                         <div class="card-body">
-                                          <h2 class="underline-on-hover" v-html="article.title" @click="navTo(article.url)" ></h2>
-                                          <p v-html="article.description"></p>
+                                          <h2 class="underline-on-hover" v-html="article.title" @click="navTo(article.link)" ></h2>
+                                          <p class="sum" v-html="article.summary" maxlength="50"></p>
                                         </div>
                                         <div class="card-footer">
-                                            <p>By : {{article.author}}</p>
-                                            <p>Published at: {{format_date(article.publishedAt)}}</p>
+                                            <p>Published at: {{format_date(article.published_date)}}</p>
                                         </div>
                                   </div>
                               </div>
@@ -53,7 +52,7 @@ export default {
         },
   data()  {
       return {
-        apiKey: '1db75d4466ab4d698992b8c5c3a22588',
+        apiKey: '-bkCU62yL6Tsuqki0EVNBGzyEgYBmh-xguz83uGD43o',
         apiUrl: '',
         isBusy: false,
         showloader: false,
@@ -104,8 +103,7 @@ export default {
         if(this.searchword !== '')
         {
           this.apiUrl = 'https://newsapi.org/v2/everything?q=' + this.searchword +
-                        '&pageSize=' + this.maxPerPage +
-                        '&apiKey=' + this.apiKey;
+                        '&pageSize=' + this.maxPerPage;
           this.isBusy = true;
           this.resetData();
           this.fetchData();
@@ -115,16 +113,19 @@ export default {
         }
       },
       fetchTopNews() {
-        this.apiUrl = 'https://newsapi.org/v2/everything?q=' + localStorage.searchword +
-                        '&pageSize=' + this.maxPerPage +
-                        '&apiKey=' + this.apiKey;
+        this.apiUrl = 'https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=' + 'Cyber' + '+Security' +
+                        '&page_size=' + this.maxPerPage + '&media=True' + '&sources=thehackernews.com';
         this.isBusy = true;
-
         this.resetData();
         this.fetchData();
       },
       fetchData() {
-        let req  = new Request(this.apiUrl + '&page=' + this.currentPage);
+        let options = {
+          headers: {
+            'X-RapidAPI-Key': '47c1a99852msh858760df8f28ea0p1c727cjsncc706f13718e',
+          }
+        };
+        let req  = new Request(this.apiUrl + '&page=' + this.currentPage, options);
         fetch(req)
           .then((resp) => resp.json())
           .then((data) => {
@@ -152,4 +153,11 @@ export default {
 .underline-on-hover:hover {
     text-decoration: underline;
 }
+.sum {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 </style>
