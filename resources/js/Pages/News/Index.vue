@@ -26,7 +26,7 @@
                                         <li v-else class="fas fa-image"></li>
                                         <div class="card-body">
                                           <h2 class="underline-on-hover" v-html="article.title" @click="navTo(article.link)" ></h2>
-                                          <p class="sum" v-html="article.summary" maxlength="50"></p>
+                                          <p class="sum" v-html="article.summary"></p>
                                         </div>
                                         <div class="card-footer">
                                             <p>Published at: {{format_date(article.published_date)}}</p>
